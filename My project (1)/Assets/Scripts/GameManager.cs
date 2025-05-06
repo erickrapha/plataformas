@@ -29,10 +29,11 @@ public class GameManager : MonoBehaviour
     }
     /*void LateUpdate()
     {
-        if(Quit == true)
+        if()
         {
+            
         }
-        if (Start == true)
+        if ()
         {
             SceneManager.LoadScene("Game");
         }
