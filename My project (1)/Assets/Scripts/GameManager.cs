@@ -15,17 +15,24 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
-            SceneManager.LoadScene("Splash");
+            //SceneManager.LoadScene("Splash");
         }
         else
         {
             Destroy(gameObject);
         }
     }
-    public void Update()
+    public void /*Update*/ LoadGameAndGUI()
     {
-        Destroy(canvas.gameObject, 2.0f);
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("GUI", LoadSceneMode.Additive);
+        /*Destroy(canvas.gameObject, 2.0f);
+        SceneManager.LoadScene("MainMenu");*/
+    }
+
+    private void Start()
+    {
+        LoadGameAndGUI();
     }
     /*void LateUpdate()
     {
