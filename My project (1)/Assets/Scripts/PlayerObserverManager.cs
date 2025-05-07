@@ -1,16 +1,16 @@
+using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerObserverManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    //Criar o canal
+    public static event Action<int> OnMoedasChanged;
+    
+    //Criar o "Postar vídeos"
+    public static void ChangedMoedas(int moedas)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        //Olha se tem inscritos e envia as notificações
+        OnMoedasChanged?.Invoke(moedas);
     }
 }

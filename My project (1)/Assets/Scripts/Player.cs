@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
         if (Keyboard.current.mKey.wasPressedThisFrame)
         {
             moedas++;
+            PlayerObserverManager.ChangedMoedas(moedas);
         }
     }
 }

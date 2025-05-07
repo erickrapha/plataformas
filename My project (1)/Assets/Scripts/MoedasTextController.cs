@@ -10,7 +10,7 @@ public class MoedasTextController : MonoBehaviour
     {
         moedasText = GetComponent<TMP_Text>();
     }
-    /*private void OnEnable()
+    private void OnEnable()
     {
         PlayerObserverManager.OnMoedasChanged += AtualizaMoedas;
     }
@@ -22,6 +22,6 @@ public class MoedasTextController : MonoBehaviour
 
     private void AtualizaMoedas(int valor)
     {
-        MoedasTextController.text = "Moedas: " + valor.ToString();
-    }*/
+        moedasText.text = "Moedas: " + valor.ToString();
+    }
 }
