@@ -1,20 +1,19 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using System.Collections;
 public class Intervalo : MonoBehaviour
 {
-    public float intervaloTempo = 2.0f;
+    public float intervaloTempo = 2f;
     public string newScene = "MainMenu";
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public void Carregamento()
     {
-        StartCoroutine("MainMenu");
+        StartCoroutine(CarregarCenaComDelayCoroutine());
     }
-
-    // Update is called once per frame
-    void Update()
+    private IEnumerator CarregarCenaComDelayCoroutine()
     {
-        
+        yield return new WaitForSeconds(intervaloTempo);
+        SceneManager.LoadScene(newScene);
     }
 }
