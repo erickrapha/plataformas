@@ -9,12 +9,12 @@ public class Intervalo : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        StartCoroutine("MainMenu");
+        Invoke("Carregado", intervaloTempo);
     }
 
     // Update is called once per frame
-    void Update()
+    void Carregado()
     {
-        
+        GameManager.instance.LoadScene(newScene);
     }
 }

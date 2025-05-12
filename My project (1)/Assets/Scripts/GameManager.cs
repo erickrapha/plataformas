@@ -6,9 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    public static Canvas canvas;
     
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void Awake()
     {
         if (instance == null)
