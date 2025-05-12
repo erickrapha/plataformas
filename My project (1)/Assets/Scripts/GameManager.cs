@@ -20,20 +20,29 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    public void LoadGameAndGUI()
+    /*public void LoadGameAndGUI()
     {
         SceneManager.LoadScene("Game");
         SceneManager.LoadScene("GUI", LoadSceneMode.Additive);
-    }
-
+    }*/
     private void Start()
     {
         SceneManager.LoadScene("Splash");
     }
-
+    
     public void LoadScene(string newScene)
     {
         SceneManager.LoadScene(newScene);
     }
-    
+    /*public void QuitGame()
+    {
+        if (Quit)
+        {
+            Application.Quit();
+        }
+        if else (Start)
+        {
+            SceneManager.LoadScene("Game");
+        }
+    }*/
 }
