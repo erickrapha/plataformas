@@ -4,7 +4,7 @@ public class Menu : MonoBehaviour
 {
    public void StartGame()
    {
-      GameManager.instance.LoadGameAndGUI();
+      //GameManager.instance.LoadGameAndGUI();
    }
 
    public void QuitGame()

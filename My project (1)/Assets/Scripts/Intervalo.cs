@@ -15,6 +15,6 @@ public class Intervalo : MonoBehaviour
     // Update is called once per frame
     void Carregado()
     {
-        GameManager.instance.LoadScene(newScene);
+        //GameManager.instance.LoadScene(newScene);
     }
 }
