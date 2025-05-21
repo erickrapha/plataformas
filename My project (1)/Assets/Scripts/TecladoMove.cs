@@ -31,19 +31,12 @@ public class TecladoMove : MonoBehaviour
         if (keyboard.aKey.isPressed || keyboard.leftArrowKey.isPressed)  moveX = -1f;
         if (keyboard.dKey.isPressed || keyboard.rightArrowKey.isPressed) moveX =  1f;
 
-        float moveZ = 0f;
-        if (keyboard.wKey.isPressed || keyboard.upArrowKey.isPressed)    moveZ =  1f;
-        if (keyboard.sKey.isPressed || keyboard.downArrowKey.isPressed)  moveZ = -1f;
 
-        Vector3 direction = new Vector3(moveX, 0f, moveZ).normalized;
+        Vector2 direction = new Vector2(moveX, 0);
         
         // Move o transform no espaço mundial, frame‐rate independent
-        t.Translate(direction * velocity * Time.deltaTime, Space.World);
+        t.Translate(direction * velocity * Time.deltaTime);
         
-        // Rotaciona apenas se houver input horizontal
-        if (moveX != 0f)
-        {
-            t.Rotate(0f, moveX * rotationSpeed * Time.deltaTime, 0f, Space.World);
-        }
+        
     }
 }
