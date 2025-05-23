@@ -2,15 +2,18 @@ using UnityEngine;
 
 public class PlatForm : MonoBehaviour
 {
+    private Collider2D collision;
+    
     public void Pisar()
     {
         EventManager.PlayerPisando();
     }
-    public void OnTriggerEnter2D(Collider2D collision)
+    public void OnDestroy()
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            //EventManager();
+            Debug.Log("O Player está pisando no PlatForm");
+            EventManager.PlayerPisando();
         }
     }
 }

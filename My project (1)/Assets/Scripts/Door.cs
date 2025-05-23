@@ -1,13 +1,16 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Door : MonoBehaviour
 {
-    //public bool trigger;
-    //public BoxCollider2D boxCollider;
     
     // Update is called once per frame
     void Update()
     {
-        
+        if (OnDestroy) return;
+        //EventManager.PlayerPisando();
+        Destroy(this.gameObject);
     }
+
+    public bool OnDestroy { get; set; }
 }
