@@ -21,19 +21,3 @@ public static class QuebraCabeca
     }
 }
 
-class Program
-{
-    private static void Main()
-    {
-        List<string> names = new List<string>();
-        
-        Debug.Log("Lista Original");
-        names.ForEach(n => Debug.Log(n));
-        
-        //Embaralhamento
-        names.Embaralhar();
-        
-        Debug.Log("Lista Embaralhada");
-        names.ForEach(n => Debug.Log(n));
-    }
-}
