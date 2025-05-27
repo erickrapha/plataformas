@@ -1,11 +1,23 @@
 using UnityEngine;
 
-public class ControllerPiece : MonoBehaviour
+public class Peca : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public static Peca selecionada1;
+    public static Peca selecionada2;
+    
+    private void OnMouseDown()
     {
-        
+        /*if (selecionada1 == null)
+        {
+            selecionada1 = this;
+            Destacar(true);
+        }
+        else if (selecionada2 == null && this != null)
+        {
+            selecionada2 = this;
+            Destacar(true);
+            Trocar();
+        }*/
     }
 
     // Update is called once per frame
