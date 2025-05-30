@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Panel : MonoBehaviour
 {
-    public List<GameObject> list;
+    public List<RectTransform> list;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
