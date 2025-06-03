@@ -1,11 +1,14 @@
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.TextCore;
+using static UnityEngine.Color;
 
 public class PecaClicavel : MonoBehaviour
 {
     private static PecaClicavel pecaSelecionada;
-    
-    /*private void OnMouseDown()
-    { 
+
+    private void OnMouseDown()
+    {
         if (pecaSelecionada == null)
         {
             pecaSelecionada = this;
@@ -22,18 +25,19 @@ public class PecaClicavel : MonoBehaviour
             pecaSelecionada.Destacar(false);
             pecaSelecionada = null;
         }
-        
-        void TrocarPosicao(PecaClicavel outraPeca)
-        {
-            Vector3 tempPos = transform.position;
-            transform.position = outraPeca.transform.position;
-            outraPeca.transform.position = tempPos;
-        }
-        void Destacar(bool ativar)
-        {
-            GetComponent<Renderer>().material.color = ativar == true ? Color.yellow : Color.white;
-        }
-        
-    }*/
+    }
+    void TrocarPosicao(PecaClicavel outraPeca)
+    {
+        Vector2 tempPos = transform.position;
+        transform.position = outraPeca.transform.position;
+        outraPeca.transform.position = tempPos;
+    }
+    void Destacar(bool ativar)
+    {
+        GetComponent<Renderer>().material.color = ativar ? Color.yellow : Color.white;
+    }
+
     
+
 }
+
