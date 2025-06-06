@@ -34,7 +34,7 @@ public class PecaClicavel : MonoBehaviour
     }
     void Destacar(bool ativar)
     {
-        GetComponent<Renderer>().material.color = ativar ? Color.yellow : Color.white;
+        GetComponent<SpriteRenderer>().material.color = ativar ? Color.yellow : Color.white;
     }
 
     

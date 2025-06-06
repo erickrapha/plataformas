@@ -7,7 +7,7 @@ public static class QuebraCabeca
 {
     private static Random random = new Random();
     
-    /*public static void Embaralhar<T>(this IList<T> list)
+    public static void Embaralhar<T>(this IList<T> list)
     {
         var n = list.Count;
         while (n > 1)
@@ -18,6 +18,6 @@ public static class QuebraCabeca
             list[k] = list[n];
             list[n] = value;
         }
-    }*/
+    }
 }
 
