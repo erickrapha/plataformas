@@ -1,17 +1,20 @@
+using System;
 using Unity.VisualScripting;
 using UnityEngine;
 
 public class Door : MonoBehaviour
 {
-    
-    // Update is called once per frame
-    void Update()
+    private void OnEnable()
     {
-        if (OnDestroy == true)
-        {
-            EventManager.PlayerPisando();
-            Destroy(this.gameObject);
-        }
+        EventManager.OnPlayerPisando += ReagirAPisada;
     }
-    public bool OnDestroy { get; set; }
+    private void OnDisable()
+    {
+        EventManager.OnPlayerPisando -= ReagirAPisada;
+    }
+
+    private void ReagirAPisada()
+    {
+        Debug.Log("O Player pisou! Recebi o Evento");
+    }
 }

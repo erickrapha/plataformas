@@ -4,21 +4,19 @@ using UnityEngine;
 
 public class PlatFormButton : MonoBehaviour
 {
-    public BoxCollider2D collision;
-    public GameObject gameObject;
     
     public void Pisar()
     {
         EventManager.PlayerPisando();
     }
-    private bool OnDestroy()
+
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player"))
         {
             Debug.Log(message: "O Player está pisando no PlatFormButton");
             EventManager.PlayerPisando();
         }
-        return true;
     }
 
 }
