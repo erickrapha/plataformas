@@ -9,12 +9,11 @@ public class PlatFormButton : MonoBehaviour
     {
         EventManager.PlayerPisando();
     }
-
-    private void OnTriggerEnter2D(Collider2D other)
+    public void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Debug.Log(message: "O Player está pisando no PlatFormButton");
+            Debug.Log("O Player está pisando no PlatFormButton");
             EventManager.PlayerPisando();
         }
     }

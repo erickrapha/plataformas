@@ -6,15 +6,15 @@ public class Door : MonoBehaviour
 {
     private void OnEnable()
     {
-        EventManager.OnPlayerPisando += ReagirAPisada;
+        EventManager.OnPlayerPisando += ReagirAoPisao;
     }
     private void OnDisable()
     {
-        EventManager.OnPlayerPisando -= ReagirAPisada;
+        EventManager.OnPlayerPisando -= ReagirAoPisao;
     }
-
-    private void ReagirAPisada()
+    void ReagirAoPisao()
     {
         Debug.Log("O Player pisou! Recebi o Evento");
+        Destroy(gameObject);
     }
 }
