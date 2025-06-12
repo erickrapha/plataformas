@@ -26,18 +26,15 @@ public class PecaClicavel : MonoBehaviour
             pecaSelecionada = null;
         }
     }
-    void TrocarPosicao(PecaClicavel outraPeca)
+    private void TrocarPosicao(PecaClicavel outraPeca)
     {
         Vector2 tempPos = transform.position;
         transform.position = outraPeca.transform.position;
         outraPeca.transform.position = tempPos;
     }
-    void Destacar(bool ativar)
+    private void Destacar(bool ativar)
     {
         GetComponent<SpriteRenderer>().material.color = ativar ? Color.yellow : Color.white;
     }
-
-    
-
 }
 

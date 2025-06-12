@@ -19,19 +19,19 @@ public class PuzzleManager : MonoBehaviour
     public PecaClicavel puzzlePiece14;
     public PecaClicavel puzzlePiece15;
     
-    /*[SerializeField] private PuzzlePiece[] puzzlePieces;
-    private bool puzzleCompleto = false;
+    [SerializeField] private PuzzlePiece[] puzzlePieces;
+    private bool puzzleCompleted = false;
 
     // Update is called once per frame
-    private void Update()
+    /*/void Update()
     {
-        if (!puzzleCompleto && CheckPuzzleCompletado())
+        if (!puzzleCompleted && CheckPuzzleCompletion())
         {
-            puzzleCompleto = true;
-            OnPuzzleCompleto();
+            puzzleCompleted = true;
+            OnPuzzleCompleted();
         }
     }
-    private bool CheckPuzzleCompletado()
+    private bool CheckPuzzleCompletion()
     {
         foreach (var piece in puzzlePieces)
         {
@@ -40,9 +40,9 @@ public class PuzzleManager : MonoBehaviour
         }
         return true;
     }
-    private void OnPuzzleCompleto()
+    private void OnPuzzleCompleted()
     }
-        Debug.Log("Puzzle completo");
+        Debug.Log("Puzzle terminado");
         UIManager.Instance.ShowVictoryScreen();
     }*/
 

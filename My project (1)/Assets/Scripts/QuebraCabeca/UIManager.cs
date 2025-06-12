@@ -1,12 +1,13 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    public static UIManager instance;
+    private static UIManager instance;
     
     [SerializeField] private GameObject telaVitoria;
     
-    void Awake()
+    private void Awake()
     {
         if (instance == null)
         {
