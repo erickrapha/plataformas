@@ -1,21 +1,44 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.PlayerLoop;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    private static UIManager instance;
+    public static UIManager instance;
     
-    [SerializeField] private GameObject telaVitoria;
+    [SerializeField] static private GameObject vitoryScreen;
+    private bool puzzleComplete = false;
     
     private void Awake()
     {
+        CheckPuzzleCompletion();
         if (instance == null)
         {
             instance = this;
         }
     }
-    public void ShowVictoryScreen()
+    /*public void CheckVictoryCondition(CheckPuzzleCompletion() && !puzzleComplete)
     {
-        telaVitoria.SetActive(true);
+        puzzleComplete = true;
+        ShowVictoryScreen();
+    }*/
+    public static void ShowVictoryScreen()
+    {
+        vitoryScreen.SetActive(true);
+        Time.timeScale = 0f;
+    }
+    bool CheckPuzzleCompletion()
+    {
+        return true;
+    }
+    void OnPiecePlacedCorrectly()
+    {
+        CheckPuzzleCompletion();
+    }
+    public void ResetPuzzle()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

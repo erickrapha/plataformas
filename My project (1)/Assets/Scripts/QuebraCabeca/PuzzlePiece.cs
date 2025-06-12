@@ -2,8 +2,9 @@ using UnityEngine;
 
 public class PuzzlePiece : MonoBehaviour
 {
-    public bool IsCorrectlyPlaceb { get; private set; }
-    
+    public static bool IsCorrectlyPlaceb;
+    public bool IsCorrectlyPlaced { get; set; }
+
     public void SetCorrectlyPlaceb(bool isPlaceb)
     {
         IsCorrectlyPlaceb = isPlaceb;

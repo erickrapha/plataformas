@@ -20,10 +20,10 @@ public class PuzzleManager : MonoBehaviour
     public PecaClicavel puzzlePiece15;
     
     [SerializeField] private PuzzlePiece[] puzzlePieces;
-    private bool puzzleCompleted = false;
+    private static bool puzzleCompleted = false;
 
     // Update is called once per frame
-    /*/void Update()
+    public void Update()
     {
         if (!puzzleCompleted && CheckPuzzleCompletion())
         {
@@ -40,11 +40,11 @@ public class PuzzleManager : MonoBehaviour
         }
         return true;
     }
-    private void OnPuzzleCompleted()
+    public void OnPuzzleCompleted()
+    {
+        /*Debug.Log("Puzzle terminado");
+        UIManager.instance.ShowVictoryScreen();*/
     }
-        Debug.Log("Puzzle terminado");
-        UIManager.Instance.ShowVictoryScreen();
-    }*/
 
 }
 
