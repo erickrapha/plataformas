@@ -2,7 +2,7 @@ using UnityEngine;
 
 public partial interface ICommand
 {
-    void Do();
+    public void Execute();
     
-    void Undo();
+    //public void Undo();
 }

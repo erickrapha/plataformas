@@ -1,7 +1,7 @@
 using System.ComponentModel.Design;
 using UnityEngine;
 
-public class MoveUp : ICommand
+/*public class MoveUp : ICommand
 {
     private Transform playerTransform;
 
@@ -61,5 +61,5 @@ public class GetCoin : ICommand
         //Lembre de executar a função só uma vez
         player.UndoLastCommand();
     }
-}
+}*/
 

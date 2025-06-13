@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class SimplePlayer : MonoBehaviour
+/*public class SimplePlayer : MonoBehaviour
 {
     public int moedas = 0;
     private CommandManager myCommandManager;
@@ -46,4 +46,4 @@ public class SimplePlayer : MonoBehaviour
     {
         myCommandManager.UndoCommand();
     }
-}
+}*/
