@@ -1,4 +1,5 @@
 using System;
+using static UnityEditor.Undo;
 using UnityEngine;
 using System.Collections.Generic;
 using System.Threading;
@@ -27,7 +28,7 @@ public class GameController
         if (command != null)
         {
             command.Execute();
-            commandHiostory.Add(command)
+            commandHiostory.Add(command);
         }
     }
     public void Replay()
@@ -39,5 +40,11 @@ public class GameController
             cmd.Execute();
             Thread.Sleep(500);
         }
+    }
+
+    static void Main()
+    {
+        var gameController = new GameController();
+        Debug.Log();
     }*/
 }

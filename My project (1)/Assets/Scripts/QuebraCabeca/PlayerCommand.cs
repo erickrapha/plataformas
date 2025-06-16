@@ -1,6 +1,6 @@
 using UnityEngine;
 
-/*public class PlayerCommand : ICommand
+/*class PlayerCommand : ICommand
 {
     public int x = 0;
     public int y = 0;
