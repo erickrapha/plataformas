@@ -29,6 +29,28 @@ public class GameController
         {
             command.Execute();
             commandHiostory.Add(command);
+            undoStack.Push(command);
+            redoStack.Clear();            
+        }
+    }
+    public void Undo()
+    {
+        if (undoStack.Count > 0)
+        {
+            var command = undoStack.Pop();
+            command.Undo();
+            redoStack.Push(command);
+            Debug.Log("Desfez o ato");
+        }
+    }
+    public void Redo()
+    {
+        if (redoStack.Count > 0)
+        {
+            var command = redoStack.Pop();
+            command.Execute();
+            undoStack.Push(command);
+            Debug.Log("Refez o ato");
         }
     }
     public void Replay()
@@ -41,10 +63,17 @@ public class GameController
             Thread.Sleep(500);
         }
     }
-
     static void Main()
     {
         var gameController = new GameController();
-        Debug.Log();
+        Debug.Log("Use WASD para mover, R para replay, Y para refazer, Z para desfazer e Q para sair");
+
+        while (true)
+        {
+            var key = Console.ReadKey(true).Key;
+            if (key == ConsoleKey.Q) break;
+            if (key == ConsoleKey.R) gameController.Replay();
+            else gameController.HandleInput(key);
+        }
     }*/
 }

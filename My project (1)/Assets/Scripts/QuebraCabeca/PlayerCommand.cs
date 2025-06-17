@@ -1,18 +1,11 @@
-using UnityEngine;
+/*using UnityEngine;
 
-/*class PlayerCommand : ICommand
+class PlayerCommand : ICommand
 {
     public int x = 0;
     public int y = 0;
 
-    public void Execute()
-    {
-
-    }
-    public void Undo()
-    {
-
-    }
+    
     public void Move(int dx, int dy)
     {
         x += dx;
@@ -28,6 +21,7 @@ public class MoveUpCommand : ICommand
     public void Execute() => _player.Move(0, 1);
     public void Undo() => _player.Move(0, -1);
 }
+
 public class MoveDownCommand : ICommand
 {
     private PlayerCommand _player;
