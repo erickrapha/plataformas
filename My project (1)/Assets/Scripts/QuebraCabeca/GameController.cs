@@ -7,9 +7,9 @@ using System.Threading;
 
 public class GameController 
 {
-    public List<ICommand> commandHistory = new List<ICommand>();
+    /*public List<ICommand> commandHistory = new List<ICommand>();
     
-    /*private PlayerCommand _player = new PlayerCommand();
+    private PlayerCommand _player = new PlayerCommand();
     private Stack<ICommand> undoStack = new Stack<ICommand>();
     private Stack<ICommand> redoStack = new Stack<ICommand>();
 
