@@ -1,4 +1,5 @@
 using UnityEngine;
+using static UnityEngine.Debug;
 
 public class PuzzleManager : MonoBehaviour
 {
@@ -20,8 +21,13 @@ public class PuzzleManager : MonoBehaviour
     public PecaClicavel puzzlePiece15;
     
     [SerializeField] private PuzzlePiece[] puzzlePieces;
-    private static bool puzzleCompleted = false;
+    public bool puzzleCompleted = false;
 
+    void Start()
+    {
+        OnPuzzleCompleted();
+    }
+    
     // Update is called once per frame
     public void Update()
     {
@@ -40,10 +46,10 @@ public class PuzzleManager : MonoBehaviour
         }
         return true;
     }
-    public void OnPuzzleCompleted()
+    public static void OnPuzzleCompleted()
     {
-        /*Debug.Log("Puzzle terminado");
-        UIManager.instance.ShowVictoryScreen();*/
+        Debug.Log(message: "Puzzle terminado");
+        UIManager.instance.ShowVictoryScreen();
     }
 
 }

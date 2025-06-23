@@ -7,8 +7,8 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager instance;
     
-    [SerializeField] static private GameObject vitoryScreen;
-    private bool puzzleComplete = false;
+    [SerializeField] public GameObject vitoryScreen;
+    public bool puzzleComplete = false;
     
     private void Awake()
     {
@@ -18,21 +18,25 @@ public class UIManager : MonoBehaviour
             instance = this;
         }
     }
-    /*public void CheckVictoryCondition(CheckPuzzleCompletion() && !puzzleComplete)
+    public void CheckVictoryCondition()
+    {
+        CheckVictoryCondition();
+    }
+    /*public void CheckVictoryCondition(CheckPuzzleCompletion && !puzzleComplete)
     {
         puzzleComplete = true;
         ShowVictoryScreen();
     }*/
-    public static void ShowVictoryScreen()
+    public void ShowVictoryScreen()
     {
         vitoryScreen.SetActive(true);
         Time.timeScale = 0f;
     }
-    bool CheckPuzzleCompletion()
+    public bool CheckPuzzleCompletion()
     {
         return true;
     }
-    void OnPiecePlacedCorrectly()
+    public void OnPiecePlacedCorrectly()
     {
         CheckPuzzleCompletion();
     }
@@ -41,4 +45,8 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+}
+public abstract class CheckPuzzleCompletion
+{
+    
 }

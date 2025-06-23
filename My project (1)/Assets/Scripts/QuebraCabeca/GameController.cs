@@ -1,13 +1,15 @@
 using System;
 using static UnityEditor.Undo;
 using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 
 public class GameController 
 {
+    public List<ICommand> commandHistory = new List<ICommand>();
+    
     /*private PlayerCommand _player = new PlayerCommand();
-    private List<ICommand> commandHistory = new List<ICommand>();
     private Stack<ICommand> undoStack = new Stack<ICommand>();
     private Stack<ICommand> redoStack = new Stack<ICommand>();
 
@@ -28,7 +30,7 @@ public class GameController
         if (command != null)
         {
             command.Execute();
-            commandHiostory.Add(command);
+            commandHistory.Add(command);
             undoStack.Push(command);
             redoStack.Clear();            
         }
