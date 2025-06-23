@@ -1,52 +1,41 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.PlayerLoop;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
     public static UIManager instance;
     
-    [SerializeField] public GameObject vitoryScreen;
-    public bool puzzleComplete = false;
+    [SerializeField] private GameObject victoryScreen;
+    private bool puzzleComplete = false;
     
     private void Awake()
     {
-        CheckPuzzleCompletion();
         if (instance == null)
         {
             instance = this;
         }
     }
-    public void CheckVictoryCondition()
+    public void OnPiecePlacedCorrectly()
     {
-        CheckVictoryCondition();
-    }
-    /*public void CheckVictoryCondition(CheckPuzzleCompletion && !puzzleComplete)
-    {
-        puzzleComplete = true;
-        ShowVictoryScreen();
-    }*/
-    public void ShowVictoryScreen()
-    {
-        vitoryScreen.SetActive(true);
-        Time.timeScale = 0f;
+        if(!puzzleComplete && CheckPuzzleCompletion())
+        {
+            puzzleComplete = true;
+            ShowVictoryScreen();
+        }
     }
     public bool CheckPuzzleCompletion()
     {
         return true;
     }
-    public void OnPiecePlacedCorrectly()
+    public void ShowVictoryScreen()
     {
-        CheckPuzzleCompletion();
+        victoryScreen.SetActive(true);
+        Time.timeScale = 0f;
     }
     public void ResetPuzzle()
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-}
-public abstract class CheckPuzzleCompletion
-{
-    
 }
