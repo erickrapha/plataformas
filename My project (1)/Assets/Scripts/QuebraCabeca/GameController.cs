@@ -8,7 +8,7 @@ using UnityEngine.UIElements;
 
 public class GameController 
 {
-    /*public Transform player;
+    public Transform player;
     public Button cancelReplay;
     
     private List<ICommand> commandHistory = new List<ICommand>();
@@ -19,7 +19,7 @@ public class GameController
     private Coroutine replayCoroutine;
     private bool isReplaying = false;
 
-    private void Start()
+    void Start()
     {
         if (cancelReplayButton != null)
         {
@@ -27,68 +27,51 @@ public class GameController
         }
     }
 
-    public void Update()
+    void Update()
     {
         if (isReplaying) return;
-        
-        if(Input.GetKeyDown(KeyCode.W)) Exec
-        {
-            
-        }
-    }
-    public void HandleInput(ConsoleKey key)
-    {
-        ICommand command = null;
 
-        switch (key)
-        {
-            case ConsoleKey.W : command = new MoveUpCommand(_player); break;
-            case ConsoleKey.S : command = new MoveDownCommand(_player); break;
-            case ConsoleKey.A : command = new MoveLeftCommand(_player); break;
-            case ConsoleKey.D : command = new MoveRightCommand(_player); break;
-            case ConsoleKey.Z : Undo(); return;
-            case ConsoleKey.Y : Redo(); return;
-            case ConsoleKey.R : Replay(); return;
-        }
-        if (command != null)
-        {
-            command.Execute();
-            commandHistory.Add(command);
-            undoStack.Push(command);
-            redoStack.Clear();            
-        }
+        if (Input.GetKeyDown(KeyCode.W)) ExecuteCommand(new MoveUpCommand(player));
+        if (Input.GetKeyDown(KeyCode.Z)) Undo();
+        if (Input.GetKeyDown(KeyCode.Y)) Redo();
+        if (Input.GetKeyDown(KeyCode.R)) StartReplay();
     }
-    public void Undo()
+
+    void ExecuteCommand(ICommand command)
     {
-        if (undoStack.Count > 0)
-        {
-            var command = undoStack.Pop();
-            command.Undo();
-            redoStack.Push(command);
-            Debug.Log("Desfez o ato");
-        }
+        command.Execute();
+        commandHistory.Add(command);
+        undoStack.Push(command);
+        redoStack.Clear();     
     }
-    public void Redo()
+    void Undo()
     {
-        if (redoStack.Count > 0)
-        {
-            var command = redoStack.Pop();
-            command.Execute();
-            undoStack.Push(command);
-            Debug.Log("Refez o ato");
-        }
+        if (undoStack.Count == 0) return;
+        var command = undoStack.Pop();
+        command.Undo();
+        redoStack.Push(command);
+        //Desfez o ato
     }
-    public void Replay()
+    void Redo()
     {
-        Debug.Log("Replaying");
-        _player = new PlayerCommand();
-        foreach (var cmd in commandHistory)
-        {
-            cmd.Execute();
-            Thread.Sleep(500);
-        }
+        if (redoStack.Count == 0) return;
+        var command = redoStack.Pop();
+        command.Execute();
+        undoStack.Push(command);
+        //Refez o ato
     }
-    static void Main()
+    void StartReplay()
+    {
+        if (undoStack.Count == 0 || isReplaying) return;
+        replayCoroutine = StartCoroutine(Replay());
+    }
+
+    IEnumerator Replay()
+    {
+        isReplaying = true;
+        if(cancelReplayButton )
+    }
+    /*static void Main()
     {
         var gameController = new GameController();
         Debug.Log("Use WASD para mover, R para replay, Y para refazer, Z para desfazer e Q para sair");
