@@ -3,30 +3,27 @@ using static UnityEditor.Undo;
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using System.Threading;
 using UnityEngine.UIElements;
 
-public class GameController 
+public class CommandController : MonoBehaviour
 {
     public Transform player;
     public Button cancelReplay;
-    
+
     private List<ICommand> commandHistory = new List<ICommand>();
+
     //private PlayerCommand _player = new PlayerCommand();
     private Stack<ICommand> undoStack = new Stack<ICommand>();
     private Stack<ICommand> redoStack = new Stack<ICommand>();
-    
+
     private Coroutine replayCoroutine;
     private bool isReplaying = false;
 
-    void Start()
+    /*void Start()
     {
         if (cancelReplayButton != null)
-        {
             cancelReplayButton.gameObject.SetActive(false);
-        }
     }
-
     void Update()
     {
         if (isReplaying) return;
@@ -36,13 +33,12 @@ public class GameController
         if (Input.GetKeyDown(KeyCode.Y)) Redo();
         if (Input.GetKeyDown(KeyCode.R)) StartReplay();
     }
-
     void ExecuteCommand(ICommand command)
     {
         command.Execute();
         commandHistory.Add(command);
         undoStack.Push(command);
-        redoStack.Clear();     
+        redoStack.Clear();
     }
     void Undo()
     {
@@ -65,23 +61,36 @@ public class GameController
         if (undoStack.Count == 0 || isReplaying) return;
         replayCoroutine = StartCoroutine(Replay());
     }
-
     IEnumerator Replay()
     {
         isReplaying = true;
-        if(cancelReplayButton )
-    }
-    /*static void Main()
-    {
-        var gameController = new GameController();
-        Debug.Log("Use WASD para mover, R para replay, Y para refazer, Z para desfazer e Q para sair");
+        if (cancelReplayButton != null)
+            cancelReplayButton.gameObject.SetActive(true);
 
-        while (true)
+        player.position = Vector3.zero;
+        foreach (var command in commandHistory)
         {
-            var key = Console.ReadKey(true).Key;
-            if (key == ConsoleKey.Q) break;
-            if (key == ConsoleKey.R) gameController.Replay();
-            else gameController.HandleInput(key);
+            if (!isReplaying) yield break;
+
+            command.Execute();
+            yield return new WaitForSeconds(0.5f);
         }
+
+        isReplaying = false;
+        if (cancelReplayButton != null)
+            cancelReplayButton.gameObject.SetActive(true);
+    }
+    public void CancelReplay()
+    {
+        if (!isReplaying) return;
+
+        isReplaying = false;
+
+        if (replayCoroutine != null)
+            StopCoroutine(replayCoroutine);
+        if (cancelReplayButton != null)
+            cancelReplayButton.gameObject.SetActive(true);
+        Debug.Log("Replay cancelado");
     }*/
+
 }
