@@ -4,15 +4,38 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
+using UnityEngine.UIElements;
 
 public class GameController 
 {
-    /*public List<ICommand> commandHistory = new List<ICommand>();
+    /*public Transform player;
+    public Button cancelReplay;
     
-    private PlayerCommand _player = new PlayerCommand();
+    private List<ICommand> commandHistory = new List<ICommand>();
+    //private PlayerCommand _player = new PlayerCommand();
     private Stack<ICommand> undoStack = new Stack<ICommand>();
     private Stack<ICommand> redoStack = new Stack<ICommand>();
+    
+    private Coroutine replayCoroutine;
+    private bool isReplaying = false;
 
+    private void Start()
+    {
+        if (cancelReplayButton != null)
+        {
+            cancelReplayButton.gameObject.SetActive(false);
+        }
+    }
+
+    public void Update()
+    {
+        if (isReplaying) return;
+        
+        if(Input.GetKeyDown(KeyCode.W)) Exec
+        {
+            
+        }
+    }
     public void HandleInput(ConsoleKey key)
     {
         ICommand command = null;

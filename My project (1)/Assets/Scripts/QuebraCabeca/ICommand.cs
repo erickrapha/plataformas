@@ -1,6 +1,6 @@
 using UnityEngine;
 
-/*public interface ICommand
+public interface ICommand
 {
     void Execute(); 
     void Undo();
@@ -58,4 +58,4 @@ public class MoveRightCommand : ICommand
     public MoveRightCommand(PlayerCommand player) => _player = player;
     public void Execute() => _player.Move(1, 0);
     public void Undo() => _player.Move(-1,0);
-}*/
+}

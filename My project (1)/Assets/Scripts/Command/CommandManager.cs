@@ -1,4 +1,4 @@
-using UnityEngine;
+/*using UnityEngine;
 using System.Collections.Generic;
 
 public class CommandManager
@@ -21,4 +21,4 @@ public class CommandManager
         commands.RemoveAt(commands.Count - 1);
         command.Undo();
     }
-}
+}*/
