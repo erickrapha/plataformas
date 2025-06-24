@@ -3,26 +3,24 @@ using static UnityEditor.Undo;
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class CommandController : MonoBehaviour
 {
-    public Transform player;
+    public PlayerCommand player;
     public Button cancelReplay;
 
     private List<ICommand> commandHistory = new List<ICommand>();
-
-    //private PlayerCommand _player = new PlayerCommand();
     private Stack<ICommand> undoStack = new Stack<ICommand>();
     private Stack<ICommand> redoStack = new Stack<ICommand>();
 
     private Coroutine replayCoroutine;
     private bool isReplaying = false;
 
-    /*void Start()
+    void Start()
     {
-        if (cancelReplayButton != null)
-            cancelReplayButton.gameObject.SetActive(false);
+        if (cancelReplay != null)
+            cancelReplay.gameObject.SetActive(false);
     }
     void Update()
     {
@@ -64,10 +62,11 @@ public class CommandController : MonoBehaviour
     IEnumerator Replay()
     {
         isReplaying = true;
-        if (cancelReplayButton != null)
-            cancelReplayButton.gameObject.SetActive(true);
+        
+        if (cancelReplay != null)
+            cancelReplay.gameObject.SetActive(true);
 
-        player.position = Vector3.zero;
+        //player.position = Vector3.zero;
         foreach (var command in commandHistory)
         {
             if (!isReplaying) yield break;
@@ -77,8 +76,9 @@ public class CommandController : MonoBehaviour
         }
 
         isReplaying = false;
-        if (cancelReplayButton != null)
-            cancelReplayButton.gameObject.SetActive(true);
+        
+        if (cancelReplay != null)
+            cancelReplay.gameObject.SetActive(true);
     }
     public void CancelReplay()
     {
@@ -88,9 +88,9 @@ public class CommandController : MonoBehaviour
 
         if (replayCoroutine != null)
             StopCoroutine(replayCoroutine);
-        if (cancelReplayButton != null)
-            cancelReplayButton.gameObject.SetActive(true);
+        if (cancelReplay != null)
+            cancelReplay.gameObject.SetActive(true);
         Debug.Log("Replay cancelado");
-    }*/
+    }
 
 }
