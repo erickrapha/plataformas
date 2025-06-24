@@ -38,7 +38,8 @@ public class CommandController : MonoBehaviour
         undoStack.Push(command);
         redoStack.Clear();
     }
-    void Undo()
+
+    public void Undo()
     {
         if (undoStack.Count == 0) return;
         var command = undoStack.Pop();
@@ -79,6 +80,7 @@ public class CommandController : MonoBehaviour
         
         if (cancelReplay != null)
             cancelReplay.gameObject.SetActive(true);
+        PuzzleManager.OnPuzzleCompleted();
     }
     public void CancelReplay()
     {
