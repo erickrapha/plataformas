@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class CommandController : MonoBehaviour
 {
-    public PlayerCommand player;
+    public Transform player;
     public Button cancelReplay;
 
     private List<ICommand> commandHistory = new List<ICommand>();
@@ -26,7 +26,7 @@ public class CommandController : MonoBehaviour
     {
         if (isReplaying) return;
 
-        if (Input.GetKeyDown(KeyCode.W)) ExecuteCommand(new MoveUpCommand(player));
+        //if (Input.GetKeyDown(KeyCode.W)) ExecuteCommand(new MoveUpCommand(player));
         if (Input.GetKeyDown(KeyCode.Z)) Undo();
         if (Input.GetKeyDown(KeyCode.Y)) Redo();
         if (Input.GetKeyDown(KeyCode.R)) StartReplay();
@@ -38,7 +38,6 @@ public class CommandController : MonoBehaviour
         undoStack.Push(command);
         redoStack.Clear();
     }
-
     public void Undo()
     {
         if (undoStack.Count == 0) return;
@@ -57,30 +56,31 @@ public class CommandController : MonoBehaviour
     }
     void StartReplay()
     {
-        if (undoStack.Count == 0 || isReplaying) return;
+        if (commandHistory.Count == 0 || isReplaying) return;
         replayCoroutine = StartCoroutine(Replay());
     }
     IEnumerator Replay()
     {
         isReplaying = true;
-        
         if (cancelReplay != null)
             cancelReplay.gameObject.SetActive(true);
 
-        //player.position = Vector3.zero;
+        player.position = Vector3.zero;
+        
         foreach (var command in commandHistory)
         {
             if (!isReplaying) yield break;
-
             command.Execute();
             yield return new WaitForSeconds(0.5f);
         }
 
         isReplaying = false;
-        
         if (cancelReplay != null)
-            cancelReplay.gameObject.SetActive(true);
-        PuzzleManager.OnPuzzleCompleted();
+            cancelReplay.gameObject.SetActive(false);
+        
+        PuzzleManager manager = FindObjectOfType<PuzzleManager>();
+        //if (manager != null)
+            //manager.OnPuzzleCompleted();
     }
     public void CancelReplay()
     {
@@ -90,9 +90,9 @@ public class CommandController : MonoBehaviour
 
         if (replayCoroutine != null)
             StopCoroutine(replayCoroutine);
+        
         if (cancelReplay != null)
-            cancelReplay.gameObject.SetActive(true);
+            cancelReplay.gameObject.SetActive(false);
         Debug.Log("Replay cancelado");
     }
-
 }

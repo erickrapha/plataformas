@@ -3,30 +3,9 @@ using static UnityEngine.Debug;
 
 public class PuzzleManager : MonoBehaviour
 {
-    public PecaClicavel puzzlePiece;
-    public PecaClicavel puzzlePiece1;
-    public PecaClicavel puzzlePiece2;
-    public PecaClicavel puzzlePiece3;
-    public PecaClicavel puzzlePiece4;
-    public PecaClicavel puzzlePiece5;
-    public PecaClicavel puzzlePiece6;
-    public PecaClicavel puzzlePiece7;
-    public PecaClicavel puzzlePiece8;
-    public PecaClicavel puzzlePiece9;
-    public PecaClicavel puzzlePiece10;
-    public PecaClicavel puzzlePiece11;
-    public PecaClicavel puzzlePiece12;
-    public PecaClicavel puzzlePiece13;
-    public PecaClicavel puzzlePiece14;
-    public PecaClicavel puzzlePiece15;
-    
     [SerializeField] private PuzzlePiece[] puzzlePieces;
+    
     public bool puzzleCompleted = false;
-
-    void Start()
-    {
-        OnPuzzleCompleted();
-    }
     
     // Update is called once per frame
     public void Update()
@@ -48,7 +27,7 @@ public class PuzzleManager : MonoBehaviour
     }
     public static void OnPuzzleCompleted()
     {
-        Debug.Log(message: "Puzzle terminado");
+        Debug.Log("Puzzle terminado");
         UIManager.instance.ShowVictoryScreen();
     }
 
