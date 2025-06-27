@@ -79,8 +79,8 @@ public class CommandController : MonoBehaviour
             cancelReplay.gameObject.SetActive(false);
         
         PuzzleManager manager = FindObjectOfType<PuzzleManager>();
-        //if (manager != null)
-            //manager.OnPuzzleCompleted();
+        /*if (manager != null)
+            manager.OnPuzzleCompleted();*/
     }
     public void CancelReplay()
     {
