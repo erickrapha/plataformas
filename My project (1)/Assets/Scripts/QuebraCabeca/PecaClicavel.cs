@@ -6,9 +6,13 @@ using static UnityEngine.Color;
 public class PecaClicavel : MonoBehaviour
 {
     private static PecaClicavel pecaSelecionada;
+    
+    public Vector2 locationPiece;
+    public Vector2 correctionLocation;
 
     private void OnMouseDown()
     {
+        
         if (pecaSelecionada == null)
         {
             pecaSelecionada = this;
@@ -35,6 +39,10 @@ public class PecaClicavel : MonoBehaviour
     private void Destacar(bool ativar)
     {
         GetComponent<SpriteRenderer>().material.color = ativar ? Color.yellow : Color.white;
+    }
+    public bool IsCorrectlyPlaced()
+    {
+        return locationPiece == correctionLocation;
     }
 }
 

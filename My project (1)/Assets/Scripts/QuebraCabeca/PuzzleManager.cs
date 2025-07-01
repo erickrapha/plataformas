@@ -1,12 +1,17 @@
 using UnityEngine;
+using System;
 using static UnityEngine.Debug;
 
 public class PuzzleManager : MonoBehaviour
 {
-    [SerializeField] private PuzzlePiece[] puzzlePieces;
+    [SerializeField] private PecaClicavel[] puzzlePieces;
     
     public bool puzzleCompleted = false;
     
+    public void Start()
+    {
+        QuebraCabeca.Embaralhar(puzzlePieces);
+    }
     // Update is called once per frame
     public void Update()
     {
@@ -20,7 +25,7 @@ public class PuzzleManager : MonoBehaviour
     {
         foreach (var piece in puzzlePieces)
         {
-            if (!piece.IsCorrectlyPlaced)
+            //if (!piece.IsCorrectlyPlaced)
                 return false;
         }
         return true;
