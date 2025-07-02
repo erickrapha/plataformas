@@ -3521,7 +3521,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 5878acb9214d6184ca6a02cec025828e, type: 3}
+      - m_Target: {fileID: 1967483444}
         m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
         m_MethodName: set_name
         m_Mode: 5
@@ -5813,7 +5813,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 572e219aa6b6d1c41abf6767f20ccaed, type: 3}
+      - m_Target: {fileID: 487432082}
         m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
         m_MethodName: set_name
         m_Mode: 5

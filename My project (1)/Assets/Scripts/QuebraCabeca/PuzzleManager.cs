@@ -31,7 +31,7 @@ public class PuzzleManager : MonoBehaviour
     }
     public void OnPuzzleCompleted()
     {
-        Debug.Log("Puzzle terminado");
+        Debug.Log(message: "Puzzle terminado");
         UIManager.instance.ShowVictoryScreen();
     }
 
