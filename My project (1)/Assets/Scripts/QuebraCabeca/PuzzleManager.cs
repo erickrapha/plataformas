@@ -12,7 +12,6 @@ public class PuzzleManager : MonoBehaviour
     {
         QuebraCabeca.Embaralhar(puzzlePieces);
     }
-    // Update is called once per frame
     public void Update()
     {
         if (!puzzleCompleted && CheckPuzzleCompletion())
@@ -25,12 +24,12 @@ public class PuzzleManager : MonoBehaviour
     {
         foreach (var piece in puzzlePieces)
         {
-            //if (!piece.IsCorrectlyPlaced)
+            if (!piece.IsCorrectlyPlaced())
                 return false;
         }
         return true;
     }
-    public static void OnPuzzleCompleted()
+    public void OnPuzzleCompleted()
     {
         Debug.Log("Puzzle terminado");
         UIManager.instance.ShowVictoryScreen();

@@ -337,18 +337,18 @@ PrefabInstance:
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 827843109}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Start
+      value: OnMouseDown
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Panel, Assembly-CSharp
+      value: PecaClicavel, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -494,18 +494,18 @@ PrefabInstance:
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2146416648}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Start
+      value: OnMouseDown
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Panel, Assembly-CSharp
+      value: PecaClicavel, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -641,18 +641,18 @@ PrefabInstance:
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 298356683}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Start
+      value: OnMouseDown
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Panel, Assembly-CSharp
+      value: PecaClicavel, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -866,7 +866,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   locationPiece: {x: 0, y: 0}
-  correctionLocation: {x: 0, y: 0}
+  correctionLocation: {x: 450, y: -28.64923}
 --- !u!61 &298356684
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1024,18 +1024,18 @@ PrefabInstance:
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 298793670}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Start
+      value: OnMouseDown
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Panel, Assembly-CSharp
+      value: PecaClicavel, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -1128,7 +1128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   locationPiece: {x: 0, y: 0}
-  correctionLocation: {x: 0, y: 0}
+  correctionLocation: {x: 250, y: -228.6492}
 --- !u!61 &298793671
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1286,18 +1286,18 @@ PrefabInstance:
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 375841234}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Start
+      value: OnMouseDown
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Panel, Assembly-CSharp
+      value: PecaClicavel, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -1390,7 +1390,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   locationPiece: {x: 0, y: 0}
-  correctionLocation: {x: 0, y: 0}
+  correctionLocation: {x: 350, y: -28.64923}
 --- !u!61 &375841235
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1548,18 +1548,18 @@ PrefabInstance:
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1268173995}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Start
+      value: OnMouseDown
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Panel, Assembly-CSharp
+      value: PecaClicavel, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -1618,7 +1618,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 572e219aa6b6d1c41abf6767f20ccaed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1555142056}
   cancelReplay: {fileID: 524883107}
 --- !u!4 &487432083
 Transform:
@@ -2379,18 +2379,18 @@ PrefabInstance:
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1064021828}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Start
+      value: OnMouseDown
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Panel, Assembly-CSharp
+      value: PecaClicavel, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -2526,18 +2526,18 @@ PrefabInstance:
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 797369763}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Start
+      value: OnMouseDown
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Panel, Assembly-CSharp
+      value: PecaClicavel, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -2630,7 +2630,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   locationPiece: {x: 0, y: 0}
-  correctionLocation: {x: 0, y: 0}
+  correctionLocation: {x: 350, y: -128.6492}
 --- !u!61 &797369764
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2750,7 +2750,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   locationPiece: {x: 0, y: 0}
-  correctionLocation: {x: 0, y: 0}
+  correctionLocation: {x: 250, y: -328.64923}
 --- !u!61 &827843110
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2908,18 +2908,18 @@ PrefabInstance:
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 836317029}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Start
+      value: OnMouseDown
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Panel, Assembly-CSharp
+      value: PecaClicavel, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -3012,7 +3012,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   locationPiece: {x: 0, y: 0}
-  correctionLocation: {x: 0, y: 0}
+  correctionLocation: {x: 550, y: -228.6492}
 --- !u!61 &836317030
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3170,18 +3170,18 @@ PrefabInstance:
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1468475870}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Start
+      value: OnMouseDown
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Panel, Assembly-CSharp
+      value: PecaClicavel, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -3391,7 +3391,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   locationPiece: {x: 0, y: 0}
-  correctionLocation: {x: 0, y: 0}
+  correctionLocation: {x: 450, y: -328.6492}
 --- !u!61 &1064021829
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3900,18 +3900,18 @@ PrefabInstance:
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1476745113}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Start
+      value: OnMouseDown
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Panel, Assembly-CSharp
+      value: PecaClicavel, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -4052,18 +4052,18 @@ PrefabInstance:
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1207419805}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Start
+      value: OnMouseDown
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Panel, Assembly-CSharp
+      value: PecaClicavel, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -4156,7 +4156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   locationPiece: {x: 0, y: 0}
-  correctionLocation: {x: 0, y: 0}
+  correctionLocation: {x: 250, y: -128.64923}
 --- !u!61 &1207419806
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4276,7 +4276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   locationPiece: {x: 0, y: 0}
-  correctionLocation: {x: 0, y: 0}
+  correctionLocation: {x: 450, y: -228.6492}
 --- !u!61 &1268173996
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4512,18 +4512,18 @@ PrefabInstance:
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1373400865}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Start
+      value: OnMouseDown
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Panel, Assembly-CSharp
+      value: PecaClicavel, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -4616,7 +4616,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   locationPiece: {x: 0, y: 0}
-  correctionLocation: {x: 0, y: 0}
+  correctionLocation: {x: 550, y: -328.6492}
 --- !u!61 &1373400866
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4872,7 +4872,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   locationPiece: {x: 0, y: 0}
-  correctionLocation: {x: 0, y: 0}
+  correctionLocation: {x: 450, y: -128.64923}
 --- !u!61 &1468475871
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4992,7 +4992,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   locationPiece: {x: 0, y: 0}
-  correctionLocation: {x: 0, y: 0}
+  correctionLocation: {x: 350, y: -328.6492}
 --- !u!61 &1476745114
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5039,6 +5039,37 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &1555142055
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1555142056}
+  m_Layer: 0
+  m_Name: PlayerCommand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1555142056
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1555142055}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 380.5889, y: 223.38443, z: -2.9986882}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1645560105
 GameObject:
   m_ObjectHideFlags: 0
@@ -5286,18 +5317,18 @@ PrefabInstance:
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1771326583}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Start
+      value: OnMouseDown
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Panel, Assembly-CSharp
+      value: PecaClicavel, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -5390,7 +5421,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   locationPiece: {x: 0, y: 0}
-  correctionLocation: {x: 0, y: 0}
+  correctionLocation: {x: 550, y: -128.64923}
 --- !u!61 &1771326584
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5548,18 +5579,18 @@ PrefabInstance:
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1797157083}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Start
+      value: OnMouseDown
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Panel, Assembly-CSharp
+      value: PecaClicavel, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -5652,7 +5683,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   locationPiece: {x: 0, y: 0}
-  correctionLocation: {x: 0, y: 0}
+  correctionLocation: {x: 350, y: -228.64923}
 --- !u!61 &1797157084
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5940,7 +5971,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4d7dbf87115f6f488f90df83bf2f7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puzzlePieces: []
+  puzzlePieces:
+  - {fileID: 492632709544000574}
+  - {fileID: 375841234}
+  - {fileID: 298356683}
+  - {fileID: 2146416648}
+  - {fileID: 1207419805}
+  - {fileID: 797369763}
+  - {fileID: 1468475870}
+  - {fileID: 1771326583}
+  - {fileID: 298793670}
+  - {fileID: 1797157083}
+  - {fileID: 1268173995}
+  - {fileID: 836317029}
+  - {fileID: 827843109}
+  - {fileID: 1476745113}
+  - {fileID: 1064021828}
+  - {fileID: 1373400865}
   puzzleCompleted: 0
 --- !u!4 &1967483445
 Transform:
@@ -6302,7 +6349,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   locationPiece: {x: 0, y: 0}
-  correctionLocation: {x: 0, y: 0}
+  correctionLocation: {x: 550, y: -28.64923}
 --- !u!61 &2146416649
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6450,33 +6497,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2085852545, guid: 39fad25d69dc70b45bb374a2c1893647, type: 3}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Start
-      objectReference: {fileID: 0}
-    - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Panel, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 492632709544000574}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6564,7 +6587,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   locationPiece: {x: 0, y: 0}
-  correctionLocation: {x: 0, y: 0}
+  correctionLocation: {x: 250, y: -28.64923}
 --- !u!61 &492632709544000575
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6624,3 +6647,4 @@ SceneRoots:
   - {fileID: 37040628}
   - {fileID: 487432083}
   - {fileID: 1110678481}
+  - {fileID: 1555142056}

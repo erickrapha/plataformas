@@ -10,7 +10,7 @@ public class PecaClicavel : MonoBehaviour
     public Vector2 locationPiece;
     public Vector2 correctionLocation;
 
-    private void OnMouseDown()
+    public void OnMouseDown()
     {
         
         if (pecaSelecionada == null)
