@@ -452,6 +452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b7d3f1b3861de4f9017fac5f74dd6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vazio: Vazio
 --- !u!114 &8478115700207979493
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -464,7 +465,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdd0d42eeb202d54b98e922991c78584, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
 --- !u!1101 &8773401458989586474
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -472,7 +472,10 @@ AnimatorStateTransition:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 
-  m_Conditions: []
+  m_Conditions:
+  - m_ConditionMode: 2
+    m_ConditionEvent: Comprar
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -2594056336700145774}
   m_Solo: 0
