@@ -2,17 +2,9 @@ using UnityEngine;
 
 public class SemMoeda : StateMachineBehaviour
 {
-    public Animator animator;
-    
-    private bool temMoeda = false;
-    
-    public void UsarMoeda()
-    {
-        temMoeda = false;
-        animator.SetBool("TemMoeda", temMoeda);
-    }
-    void Start()
+    public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.SetBool("TemMoeda", false);
+        Debug.Log("Iniciou o estado Sem Moeda");
     }
 }

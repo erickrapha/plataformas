@@ -4,7 +4,7 @@ public class EstadoManutenção : StateMachineBehaviour
 {
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        Debug.Log("Iniciou a manutenção da máquina");
+        Debug.Log("Iniciou o estado manutenção");
     }
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {

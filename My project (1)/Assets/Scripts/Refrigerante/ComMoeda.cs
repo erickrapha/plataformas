@@ -2,12 +2,9 @@ using UnityEngine;
 
 public class ComMoeda : StateMachineBehaviour
 {
-    public Animator animator;
-    private bool temMoeda = false;
-
-    public void ColetarMoeda()
+    public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        temMoeda = true;
-        animator.SetBool("TemMoeda", temMoeda);
+        animator.SetBool("TemMoeda", false);
+        Debug.Log("Iniciou o estado Com Moeda");
     }
 }
