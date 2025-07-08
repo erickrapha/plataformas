@@ -20,7 +20,7 @@ public class TcpServerUnity : MonoBehaviour
     {
         server = new TcpListener(IPAddress.Any, 8080);
         server.Start();
-        Debug.Log("O Servidor está ouvindo da porta 8080");
+        //Debug.Log("O Servidor está ouvindo da porta 8080");
 
         while (true)
         {
@@ -42,5 +42,5 @@ public class TcpServerUnity : MonoBehaviour
         server?.Stop();
         serverThread?.Abort();
     }
-}
+}*/
 
