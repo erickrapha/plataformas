@@ -1,16 +1,16 @@
-using UnityEngine;
+/*using UnityEngine;
 using System.Net.Sockets;
 using System.Net;
 using System.Text;
 using System.Threading;
 
-public class TcpServidor : MonoBehaviour
+public class TcpServerUnity : MonoBehaviour
 {
     private TcpListener server;
     private Thread serverThread;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    /*void Start()
+    void Start()
     {
         serverThread = new Thread(ThreadStart(StartServer));
         serverThread.IsBackground = true;
