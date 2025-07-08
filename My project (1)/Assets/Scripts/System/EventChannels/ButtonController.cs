@@ -10,8 +10,22 @@ public class ButtonController : MonoBehaviour
     {
         circleColorEvent.RaiseEvent();
     }
-    public void MudaCorEspecific(Color corEspecific)
+
+    public void MudarCorVermelho()
     {
-        specificColorEvent.RaiseEvent(corEspecific);
+        MudaCorEspecifica(Color.red);
+    }
+    public void MudarCorAzul()
+    {
+        MudaCorEspecifica(Color.blue);
+    }
+    public void MudarCorGreen()
+    {
+        MudaCorEspecifica(Color.green);
+    }
+    
+    public void MudaCorEspecifica(Color corEspecifica)
+    {
+        specificColorEvent.RaiseEvent(corEspecifica);
     }
 }
