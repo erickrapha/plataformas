@@ -5,29 +5,33 @@ using static UnityEngine.Color;
 
 public class PecaClicavel : MonoBehaviour
 {
-    private static PecaClicavel pecaSelecionada;
+    private static PecaClicavel _pecaSelecionada;
     
     public Vector2 locationPiece;
     public Vector2 correctionLocation;
 
+    public bool IsCorrectlyPlaced()
+    {
+        //return locationPiece == correctionLocation;
+        return Vector2.Distance(transform.position, locationPiece) < 0.1f;
+    }
     public void OnMouseDown()
     {
-        
-        if (pecaSelecionada == null)
+        if (_pecaSelecionada == null)
         {
-            pecaSelecionada = this;
+            _pecaSelecionada = this;
             Destacar(true);
         }
-        else if (pecaSelecionada == this)
+        else if (_pecaSelecionada == this)
         {
             Destacar(false);
-            pecaSelecionada = null;
+            _pecaSelecionada = null;
         }
         else
         {
-            TrocarPosicao(pecaSelecionada);
-            pecaSelecionada.Destacar(false);
-            pecaSelecionada = null;
+            TrocarPosicao(_pecaSelecionada);
+            _pecaSelecionada.Destacar(false);
+            _pecaSelecionada = null;
         }
     }
     private void TrocarPosicao(PecaClicavel outraPeca)
@@ -39,10 +43,6 @@ public class PecaClicavel : MonoBehaviour
     private void Destacar(bool ativar)
     {
         GetComponent<SpriteRenderer>().material.color = ativar ? Color.yellow : Color.white;
-    }
-    public bool IsCorrectlyPlaced()
-    {
-        return locationPiece == correctionLocation;
     }
 }
 

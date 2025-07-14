@@ -1,26 +1,28 @@
 using UnityEngine;
 using System;
+using System.Collections.Generic;
+using NUnit.Framework;
 using static UnityEngine.Debug;
 
 public class PuzzleManager : MonoBehaviour
 {
-    [SerializeField] private PecaClicavel[] puzzlePieces;
+    [SerializeField] private List<PecaClicavel> puzzlePieces;
     
-    public bool puzzleCompleted = false;
+    public bool isPuzzleCompleted = false;
     
-    public void Start()
+    void Start()
     {
         QuebraCabeca.Embaralhar(puzzlePieces);
     }
     public void Update()
     {
-        if (!puzzleCompleted && CheckPuzzleCompletion())
+        if (!isPuzzleCompleted && CheckPuzzleCompletion())
         {
-            puzzleCompleted = true;
-            OnPuzzleCompleted();
+            isPuzzleCompleted = true;
+            Debug.Log("O Puzzle está completo");
         }
     }
-    private bool CheckPuzzleCompletion()
+    public bool CheckPuzzleCompletion()
     {
         foreach (var piece in puzzlePieces)
         {
@@ -28,11 +30,6 @@ public class PuzzleManager : MonoBehaviour
                 return false;
         }
         return true;
-    }
-    public void OnPuzzleCompleted()
-    {
-        Debug.Log(message: "Puzzle terminado");
-        UIManager.instance.ShowVictoryScreen();
     }
 
 }

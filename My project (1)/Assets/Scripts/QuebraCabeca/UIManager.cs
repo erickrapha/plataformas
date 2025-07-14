@@ -7,7 +7,7 @@ public class UIManager : MonoBehaviour
     public static UIManager instance;
     
     [SerializeField] private GameObject victoryScreen;
-    private bool puzzleComplete = false;
+    public bool puzzleCompleted = false;
     
     private void Awake()
     {
@@ -18,9 +18,9 @@ public class UIManager : MonoBehaviour
     }
     public void OnPiecePlacedCorrectly()
     {
-        if(!puzzleComplete && CheckPuzzleCompletion())
+        if(!puzzleCompleted && CheckPuzzleCompletion())
         {
-            puzzleComplete = true;
+            puzzleCompleted = true;
             ShowVictoryScreen();
         }
     }

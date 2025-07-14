@@ -1,22 +1,21 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 using Random = System.Random;
 
 public static class QuebraCabeca 
 {
-    private static Random random = new Random();
+    private static Random _random = new Random();
     
-    public static void Embaralhar<T>(this IList<T> list)
+    public static void Embaralhar(List<PecaClicavel> list)
     {
-        var n = list.Count;
+        int n = list.Count;
         while (n > 1)
         {
             n--;
-            int k = random.Next(n + 1);
-            T value = list[k];
+            int k = _random.Next(n + 1);
+            PecaClicavel temp = list[k];
             list[k] = list[n];
-            list[n] = value;
+            list[n] = temp;
         }
     }
 }

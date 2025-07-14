@@ -7,7 +7,9 @@ using UnityEngine.UI;
 
 public class CommandController : MonoBehaviour
 {
-    public Transform player;
+    [SerializeField] public Transform player;
+    [SerializeField] private PlayerCommand playerCommand;
+    
     public Button cancelReplay;
 
     private List<ICommand> commandHistory = new List<ICommand>();
@@ -26,7 +28,7 @@ public class CommandController : MonoBehaviour
     {
         if (isReplaying) return;
 
-        //if (Input.GetKeyDown(KeyCode.W)) ExecuteCommand(new MoveUpCommand(player));
+        if (Input.GetKeyDown(KeyCode.W)) ExecuteCommand(new MoveUpCommand(playerCommand));
         if (Input.GetKeyDown(KeyCode.Z)) Undo();
         if (Input.GetKeyDown(KeyCode.Y)) Redo();
         if (Input.GetKeyDown(KeyCode.R)) StartReplay();
@@ -80,7 +82,7 @@ public class CommandController : MonoBehaviour
         
         PuzzleManager manager = FindFirstObjectByType<PuzzleManager>();
         if (manager != null)
-            manager.OnPuzzleCompleted();
+            manager.CheckPuzzleCompletion();
     }
     public void CancelReplay()
     {
