@@ -36,9 +36,10 @@ public class PecaClicavel : MonoBehaviour
     }
     private void TrocarPosicao(PecaClicavel outraPeca)
     {
-        Vector2 tempPos = transform.position;
+        
+        /*Vector2 tempPos = transform.position;
         transform.position = outraPeca.transform.position;
-        outraPeca.transform.position = tempPos;
+        outraPeca.transform.position = tempPos;*/
     }
     private void Destacar(bool ativar)
     {

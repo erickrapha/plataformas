@@ -1,10 +1,12 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Pool;
 using Random = UnityEngine.Random;
 
 public class CircleController : MonoBehaviour
 {
+    public ObjectPool<BulletController> bulletPool;
     public BulletController bulletPrefab;
     public float speed = 5.0f;
     public SpriteRenderer spriteRenderer;
@@ -16,6 +18,33 @@ public class CircleController : MonoBehaviour
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+    private void Start()
+    {
+        bulletPool = new ObjectPool<BulletController>(CreateBullet, GetBullet, ReleaseBullet, DestroyBullet,
+            false, 19, 20);
+    }
+    private void DestroyBullet(BulletController obj)
+    {
+        obj.OnDestroyBullet -= bulletPool.Release;
+        Destroy(obj.gameObject);
+    }
+    private void ReleaseBullet(BulletController obj)
+    {
+        obj.OnDestroyBullet -= bulletPool.Release;
+        obj.gameObject.SetActive(false);
+    }
+    private void GetBullet(BulletController obj)
+    {
+        obj.gameObject.SetActive(true);
+        obj.transform.position = transform.position;
+        obj.OnDestroyBullet += bulletPool.Release;
+    }
+    private BulletController CreateBullet()
+    {
+        BulletController bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+        bullet.OnDestroyBullet += bulletPool.Release;
+        return bullet;
     }
     private void OnEnable()
     {
@@ -35,14 +64,13 @@ public class CircleController : MonoBehaviour
     {
         spriteRenderer.color = corEspecifica;
     }
-
     private void Update()
     {
         if (Keyboard.current.spaceKey.wasPressedThisFrame)
         {
-            Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+            bulletPool.Get();
+            //Instantiate(bulletPrefab, transform.position, Quaternion.identity);
         }
-
         if (Keyboard.current.aKey.isPressed || Keyboard.current.leftArrowKey.isPressed)
         {
             transform.position += Vector3.left * (speed * Time.deltaTime);

@@ -7,12 +7,13 @@ using static UnityEngine.Debug;
 public class PuzzleManager : MonoBehaviour
 {
     [SerializeField] private List<PecaClicavel> puzzlePieces;
+    public Transform gridPanel;
     
     public bool isPuzzleCompleted = false;
     
     void Start()
     {
-        QuebraCabeca.Embaralhar(puzzlePieces);
+        QuebraCabeca.Embaralhar(puzzlePieces, gridPanel);
     }
     public void Update()
     {
