@@ -24,7 +24,7 @@ public class UIManager : MonoBehaviour
             ShowVictoryScreen();
         }
     }
-    public bool CheckPuzzleCompletion()
+    private bool CheckPuzzleCompletion()
     {
         return true;
     }

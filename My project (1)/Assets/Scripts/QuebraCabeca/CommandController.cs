@@ -11,11 +11,10 @@ public class CommandController : MonoBehaviour
     [SerializeField] private PlayerCommand playerCommand;
     
     public Button cancelReplay;
-
+    public Button undoButton;
     private List<ICommand> commandHistory = new List<ICommand>();
     private Stack<ICommand> undoStack = new Stack<ICommand>();
     private Stack<ICommand> redoStack = new Stack<ICommand>();
-
     private Coroutine replayCoroutine;
     private bool isReplaying = false;
 
@@ -28,6 +27,14 @@ public class CommandController : MonoBehaviour
     {
         if (isReplaying) return;
 
+        bool oneSeletionPiece = PuzzleManager.OneSeletionPiece(estaSelecionada: true);
+
+        if (undoButton != null)
+        {
+            undoButton.interactable = !oneSeletionPiece && undoStack.Count > 0;
+        }
+        if (oneSeletionPiece) return;
+        
         if (Input.GetKeyDown(KeyCode.W)) ExecuteCommand(new MoveUpCommand(playerCommand));
         if (Input.GetKeyDown(KeyCode.Z)) Undo();
         if (Input.GetKeyDown(KeyCode.Y)) Redo();
@@ -67,15 +74,13 @@ public class CommandController : MonoBehaviour
         if (cancelReplay != null)
             cancelReplay.gameObject.SetActive(true);
 
-        player.position = Vector3.zero;
-        
+        player.position = Vector2.zero;
         foreach (var command in commandHistory)
         {
             if (!isReplaying) yield break;
             command.Execute();
             yield return new WaitForSeconds(0.5f);
         }
-
         isReplaying = false;
         if (cancelReplay != null)
             cancelReplay.gameObject.SetActive(false);
@@ -87,9 +92,7 @@ public class CommandController : MonoBehaviour
     public void CancelReplay()
     {
         if (!isReplaying) return;
-
         isReplaying = false;
-
         if (replayCoroutine != null)
             StopCoroutine(replayCoroutine);
         

@@ -1,3 +1,4 @@
+using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.TextCore;
@@ -6,14 +7,16 @@ using static UnityEngine.Color;
 public class PecaClicavel : MonoBehaviour
 {
     private static PecaClicavel _pecaSelecionada;
-    
+
+    public int indiceBase;
     public Vector2 locationPiece;
     public Vector2 correctionLocation;
 
-    public bool IsCorrectlyPlaced()
+    public bool IsCorrectlyPlaced(PecaClicavel otherPiece, int positionCurrent)
     {
+        return otherPiece.indiceBase == positionCurrent;  
         //return locationPiece == correctionLocation;
-        return Vector2.Distance(transform.position, locationPiece) < 0.1f;
+        //return Vector2.Distance(transform.position, locationPiece) < 0.1f;
     }
     public void OnMouseDown()
     {

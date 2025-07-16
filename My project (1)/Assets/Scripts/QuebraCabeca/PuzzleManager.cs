@@ -27,10 +27,19 @@ public class PuzzleManager : MonoBehaviour
     {
         foreach (var piece in puzzlePieces)
         {
-            if (!piece.IsCorrectlyPlaced())
+            if (!piece.IsCorrectlyPlaced(otherPiece: new PecaClicavel(), positionCurrent: piece.indiceBase))
                 return false;
         }
         return true;
+    }
+    public static bool OneSeletionPiece(bool estaSelecionada)
+    {
+        foreach (var piece in FindObjectsOfType<PecaClicavel>())
+        {
+            //if (piece.estaSelecionada)
+                return true;
+        }
+        return false;
     }
 
 }

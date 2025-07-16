@@ -137,7 +137,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &37040625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -865,6 +865,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61b835a068876b94c8bcf830a70faed9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  indiceBase: 0
   locationPiece: {x: 0, y: 0}
   correctionLocation: {x: 450, y: -28.64923}
 --- !u!61 &298356684
@@ -1127,6 +1128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61b835a068876b94c8bcf830a70faed9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  indiceBase: 0
   locationPiece: {x: 0, y: 0}
   correctionLocation: {x: 250, y: -228.6492}
 --- !u!61 &298793671
@@ -1389,6 +1391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61b835a068876b94c8bcf830a70faed9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  indiceBase: 0
   locationPiece: {x: 0, y: 0}
   correctionLocation: {x: 350, y: -28.64923}
 --- !u!61 &375841235
@@ -1620,6 +1623,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1555142056}
   cancelReplay: {fileID: 524883107}
+  undoButton: {fileID: 0}
 --- !u!4 &487432083
 Transform:
   m_ObjectHideFlags: 0
@@ -1653,7 +1657,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &496628669
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1923,7 +1927,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &524883106
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2629,6 +2633,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61b835a068876b94c8bcf830a70faed9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  indiceBase: 0
   locationPiece: {x: 0, y: 0}
   correctionLocation: {x: 350, y: -128.6492}
 --- !u!61 &797369764
@@ -2749,6 +2754,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61b835a068876b94c8bcf830a70faed9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  indiceBase: 0
   locationPiece: {x: 0, y: 0}
   correctionLocation: {x: 250, y: -328.64923}
 --- !u!61 &827843110
@@ -3011,6 +3017,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61b835a068876b94c8bcf830a70faed9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  indiceBase: 0
   locationPiece: {x: 0, y: 0}
   correctionLocation: {x: 550, y: -228.6492}
 --- !u!61 &836317030
@@ -3390,6 +3397,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61b835a068876b94c8bcf830a70faed9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  indiceBase: 0
   locationPiece: {x: 0, y: 0}
   correctionLocation: {x: 450, y: -328.6492}
 --- !u!61 &1064021829
@@ -3706,7 +3714,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1110678478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4156,6 +4164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61b835a068876b94c8bcf830a70faed9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  indiceBase: 0
   locationPiece: {x: 0, y: 0}
   correctionLocation: {x: 250, y: -128.64923}
 --- !u!61 &1207419806
@@ -4276,6 +4285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61b835a068876b94c8bcf830a70faed9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  indiceBase: 0
   locationPiece: {x: 0, y: 0}
   correctionLocation: {x: 450, y: -228.6492}
 --- !u!61 &1268173996
@@ -4616,6 +4626,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61b835a068876b94c8bcf830a70faed9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  indiceBase: 0
   locationPiece: {x: 0, y: 0}
   correctionLocation: {x: 550, y: -328.6492}
 --- !u!61 &1373400866
@@ -4872,6 +4883,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61b835a068876b94c8bcf830a70faed9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  indiceBase: 0
   locationPiece: {x: 0, y: 0}
   correctionLocation: {x: 450, y: -128.64923}
 --- !u!61 &1468475871
@@ -4992,6 +5004,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61b835a068876b94c8bcf830a70faed9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  indiceBase: 0
   locationPiece: {x: 0, y: 0}
   correctionLocation: {x: 350, y: -328.6492}
 --- !u!61 &1476745114
@@ -5421,6 +5434,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61b835a068876b94c8bcf830a70faed9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  indiceBase: 0
   locationPiece: {x: 0, y: 0}
   correctionLocation: {x: 550, y: -128.64923}
 --- !u!61 &1771326584
@@ -5683,6 +5697,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61b835a068876b94c8bcf830a70faed9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  indiceBase: 0
   locationPiece: {x: 0, y: 0}
   correctionLocation: {x: 350, y: -228.64923}
 --- !u!61 &1797157084
@@ -6350,6 +6365,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61b835a068876b94c8bcf830a70faed9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  indiceBase: 0
   locationPiece: {x: 0, y: 0}
   correctionLocation: {x: 550, y: -28.64923}
 --- !u!61 &2146416649
@@ -6588,6 +6604,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61b835a068876b94c8bcf830a70faed9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  indiceBase: 0
   locationPiece: {x: 0, y: 0}
   correctionLocation: {x: 250, y: -28.64923}
 --- !u!61 &492632709544000575
