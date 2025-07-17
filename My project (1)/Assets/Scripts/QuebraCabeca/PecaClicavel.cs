@@ -11,6 +11,8 @@ public class PecaClicavel : MonoBehaviour
     public int indiceBase;
     public Vector2 locationPiece;
     public Vector2 correctionLocation;
+    public bool estaSelecionada;
+    
 
     public bool IsCorrectlyPlaced(PecaClicavel otherPiece, int positionCurrent)
     {
@@ -37,12 +39,11 @@ public class PecaClicavel : MonoBehaviour
             _pecaSelecionada = null;
         }
     }
-    private void TrocarPosicao(PecaClicavel outraPeca)
+    private void TrocarPosicao(PecaClicavel otherPiece)
     {
-        
-        /*Vector2 tempPos = transform.position;
-        transform.position = outraPeca.transform.position;
-        outraPeca.transform.position = tempPos;*/
+        Vector2 tempPos = transform.position;
+        transform.position = otherPiece.transform.position;
+        otherPiece.transform.position = tempPos;
     }
     private void Destacar(bool ativar)
     {

@@ -27,7 +27,7 @@ public class CommandController : MonoBehaviour
     {
         if (isReplaying) return;
 
-        bool oneSeletionPiece = PuzzleManager.OneSeletionPiece(estaSelecionada: true);
+        bool oneSeletionPiece = PuzzleManager.OneSeletionPiece();
 
         if (undoButton != null)
         {
@@ -63,12 +63,12 @@ public class CommandController : MonoBehaviour
         undoStack.Push(command);
         //Refez o ato
     }
-    void StartReplay()
+    private void StartReplay()
     {
         if (commandHistory.Count == 0 || isReplaying) return;
         replayCoroutine = StartCoroutine(Replay());
     }
-    IEnumerator Replay()
+    private IEnumerator Replay()
     {
         isReplaying = true;
         if (cancelReplay != null)

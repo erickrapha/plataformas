@@ -32,11 +32,11 @@ public class PuzzleManager : MonoBehaviour
         }
         return true;
     }
-    public static bool OneSeletionPiece(bool estaSelecionada)
+    public static bool OneSeletionPiece()
     {
         foreach (var piece in FindObjectsOfType<PecaClicavel>())
         {
-            //if (piece.estaSelecionada)
+            if (piece.estaSelecionada)
                 return true;
         }
         return false;

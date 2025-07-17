@@ -7,7 +7,6 @@ public static class QuebraCabeca
 {
     private static Random _random = new Random();
     
-    
     public static void Embaralhar(List<PecaClicavel> list, Transform grid)
     {
         int n = list.Count;
