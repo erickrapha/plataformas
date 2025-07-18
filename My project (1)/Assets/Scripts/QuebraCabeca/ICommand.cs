@@ -5,7 +5,6 @@ public interface ICommand
     void Execute(); 
     void Undo();
 }
-
 public class PlayerCommand : ICommand
 {
     public int x = 0;
@@ -26,7 +25,6 @@ public class PlayerCommand : ICommand
         Debug.Log($"Moveu para a posição: ({x}, {y})");
     }
 }
-
 public class MoveUpCommand : ICommand
 {
     private PlayerCommand _player;
@@ -35,8 +33,7 @@ public class MoveUpCommand : ICommand
     public void Execute() => _player.Move(0, 1);
     public void Undo() => _player.Move(0, -1);
 }
-
-public class MoveDownCommand : ICommand
+/*public class MoveDownCommand : ICommand
 {
     private PlayerCommand _player;
     public MoveDownCommand(PlayerCommand player) => _player = player;
@@ -58,4 +55,4 @@ public class MoveRightCommand : ICommand
     public MoveRightCommand(PlayerCommand player) => _player = player;
     public void Execute() => _player.Move(1, 0);
     public void Undo() => _player.Move(-1,0);
-}
+}*/

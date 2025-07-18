@@ -1,5 +1,5 @@
-using System;
-using static UnityEditor.Undo;
+//using System;
+//using static UnityEditor.Undo;
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
@@ -12,9 +12,11 @@ public class CommandController : MonoBehaviour
     
     public Button cancelReplay;
     public Button undoButton;
+    
     private List<ICommand> commandHistory = new List<ICommand>();
-    private Stack<ICommand> undoStack = new Stack<ICommand>();
-    private Stack<ICommand> redoStack = new Stack<ICommand>();
+    /*private Stack<ICommand> undoStack = new Stack<ICommand>();
+    private Stack<ICommand> redoStack = new Stack<ICommand>();*/
+    private int currentCommandIndex = 0;
     private Coroutine replayCoroutine;
     private bool isReplaying = false;
 
@@ -31,7 +33,7 @@ public class CommandController : MonoBehaviour
 
         if (undoButton != null)
         {
-            undoButton.interactable = !oneSeletionPiece && undoStack.Count > 0;
+            undoButton.interactable = !oneSeletionPiece && currentCommandIndex > 0;
         }
         if (oneSeletionPiece) return;
         
@@ -42,28 +44,35 @@ public class CommandController : MonoBehaviour
     }
     void ExecuteCommand(ICommand command)
     {
+        if (currentCommandIndex < commandHistory.Count)
+        {
+            commandHistory.RemoveRange(currentCommandIndex, commandHistory.Count - currentCommandIndex);
+        }
         command.Execute();
         commandHistory.Add(command);
-        undoStack.Push(command);
-        redoStack.Clear();
+        currentCommandIndex++;
+        /*undoStack.Push(command);
+        redoStack.Clear();*/
     }
     public void Undo()
     {
-        if (undoStack.Count == 0) return;
-        var command = undoStack.Pop();
-        command.Undo();
-        redoStack.Push(command);
+        if (currentCommandIndex == 0) return;
+        //var command = undoStack.Pop();
+        currentCommandIndex--;
+        commandHistory[currentCommandIndex].Undo();
+        //redoStack.Push(command);
         //Desfez o ato
     }
     void Redo()
     {
-        if (redoStack.Count == 0) return;
-        var command = redoStack.Pop();
-        command.Execute();
-        undoStack.Push(command);
+        if (currentCommandIndex >= commandHistory.Count) return;
+        //var command = redoStack.Pop();
+        commandHistory[currentCommandIndex].Execute();
+        currentCommandIndex++;
+        //undoStack.Push(command);
         //Refez o ato
     }
-    private void StartReplay()
+    public void StartReplay()
     {
         if (commandHistory.Count == 0 || isReplaying) return;
         replayCoroutine = StartCoroutine(Replay());
@@ -75,12 +84,14 @@ public class CommandController : MonoBehaviour
             cancelReplay.gameObject.SetActive(true);
 
         player.position = Vector2.zero;
+        currentCommandIndex = 0;
         foreach (var command in commandHistory)
         {
             if (!isReplaying) yield break;
             command.Execute();
             yield return new WaitForSeconds(0.5f);
         }
+        
         isReplaying = false;
         if (cancelReplay != null)
             cancelReplay.gameObject.SetActive(false);
@@ -98,6 +109,7 @@ public class CommandController : MonoBehaviour
         
         if (cancelReplay != null)
             cancelReplay.gameObject.SetActive(false);
+        
         Debug.Log("Replay cancelado");
     }
 }

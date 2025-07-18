@@ -12,6 +12,7 @@ public class PecaClicavel : MonoBehaviour
     public Vector2 locationPiece;
     public Vector2 correctionLocation;
     public bool estaSelecionada;
+    //[SerializeField]public Button btn;
     
 
     public bool IsCorrectlyPlaced(PecaClicavel otherPiece, int positionCurrent)
@@ -38,6 +39,7 @@ public class PecaClicavel : MonoBehaviour
             _pecaSelecionada.Destacar(false);
             _pecaSelecionada = null;
         }
+        //btn.enabled = true;
     }
     private void TrocarPosicao(PecaClicavel otherPiece)
     {
