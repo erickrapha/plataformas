@@ -13,7 +13,6 @@ public class PecaClicavel : MonoBehaviour
     public Vector2 correctionLocation;
     public bool estaSelecionada;
     //[SerializeField]public Button btn;
-    
 
     public bool IsCorrectlyPlaced(PecaClicavel otherPiece, int positionCurrent)
     {
