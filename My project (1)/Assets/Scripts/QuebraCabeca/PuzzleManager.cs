@@ -11,8 +11,6 @@ public class PuzzleManager : MonoBehaviour
     
     public bool isPuzzleCompleted = false;
     
-    public PecaClicavel _pecaSelecionada;
-    
     void Start()
     {
         QuebraCabeca.Embaralhar(puzzlePieces, gridPanel);
@@ -29,7 +27,7 @@ public class PuzzleManager : MonoBehaviour
     {
         foreach (var piece in puzzlePieces)
         {
-            if (!piece.IsCorrectlyPlaced(puzzlePieces.IndexOf(piece)))
+            if (!piece.IsCorrectlyPlaced())
                 return false;
         }
         return true;
@@ -43,40 +41,7 @@ public class PuzzleManager : MonoBehaviour
         }
         return false;
     }
-    
-    public void OnMouseDown(PecaClicavel pecaAtual)
-    {
-        if (_pecaSelecionada == null)
-        {
-            _pecaSelecionada = pecaAtual;
-            _pecaSelecionada.Destacar(true);
-        }
-        else if (_pecaSelecionada == pecaAtual)
-        {
-            _pecaSelecionada.Destacar(false);
-            _pecaSelecionada = null;
-        }
-        else
-        {
-            TrocarPosicao(pecaAtual);
-            _pecaSelecionada.Destacar(false);
-            _pecaSelecionada = null;
-        }
-        //btn.enabled = true;
-    }
 
-    private void TrocarPosicao(PecaClicavel pecaAtual)
-    {
-        int k = puzzlePieces.IndexOf(_pecaSelecionada);
-        int n = puzzlePieces.IndexOf(pecaAtual);
-        
-        PecaClicavel temp = puzzlePieces[k];
-        puzzlePieces[k] = puzzlePieces[n];
-        puzzlePieces[n] = temp;
-        puzzlePieces[n].transform.SetSiblingIndex(n);
-        puzzlePieces[k].transform.SetSiblingIndex(k);
-        
-    }
 }
 
 
