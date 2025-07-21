@@ -12,15 +12,12 @@ public class PecaClicavel : MonoBehaviour
     public Vector2 locationPiece;
     public Vector2 correctionLocation;
     public bool estaSelecionada;
-    //[SerializeField]public Button btn;
 
     public bool IsCorrectlyPlaced(int positionCurrent)
     {
         return indiceBase == positionCurrent;  
-        //return locationPiece == correctionLocation;
-        //return Vector2.Distance(transform.position, locationPiece) < 0.1f;
     }
-    public void OnMouseDown()
+    /*public void OnMouseDown()
     {
         if (_pecaSelecionada == null)
         {
@@ -38,15 +35,13 @@ public class PecaClicavel : MonoBehaviour
             _pecaSelecionada.Destacar(false);
             _pecaSelecionada = null;
         }
-        //btn.enabled = true;
     }
     private void TrocarPosicao(PecaClicavel otherPiece)
     {
         Vector2 tempPos = transform.position;
         transform.position = otherPiece.transform.position;
         otherPiece.transform.position = tempPos;
-    }
-    
+    }*/
     public void Destacar(bool ativar)
     {
         GetComponent<SpriteRenderer>().material.color = ativar ? Color.yellow : Color.white;

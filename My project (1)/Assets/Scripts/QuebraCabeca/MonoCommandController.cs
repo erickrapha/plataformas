@@ -1,17 +1,13 @@
-using System;
 using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine.UI;
 
-public class CommandController : MonoBehaviour
+public class MonoCommandController : MonoBehaviour
 {
-    [SerializeField] public Transform player;
+    /*[SerializeField] public Transform player;
     public int currentCommandIndex = 0;
     public Button cancelReplay;
     public Button undoButton;
     
-    [SerializeField] private PlayerCommand playerCommand;
     private List<ICommand> commandHistory = new List<ICommand>();
     private Coroutine replayCoroutine;
     private bool isReplaying = false;
@@ -24,18 +20,6 @@ public class CommandController : MonoBehaviour
     void Update()
     {
         if (isReplaying) return;
-/*
-        bool oneSeletionPiece = PuzzleManager.OneSeletionPiece();
-        if (undoButton != null)
-        {
-            undoButton.interactable = !oneSeletionPiece && currentCommandIndex > 0;
-        }
-        if (oneSeletionPiece) return;
-        
-        if (Input.GetKeyDown(KeyCode.W)) ExecuteCommand(new MoveUpCommand(playerCommand));
-        if (Input.GetKeyDown(KeyCode.Z)) Undo();
-        if (Input.GetKeyDown(KeyCode.Y)) Redo();
-        if (Input.GetKeyDown(KeyCode.R)) StartReplay();*/
     }
     void ExecuteCommand(ICommand command)
     {
@@ -52,16 +36,7 @@ public class CommandController : MonoBehaviour
         
         currentCommandIndex--;
         commandHistory[currentCommandIndex].Undo();
-       
         //Desfez o ato
-    }
-    void Redo()
-    {
-        if (currentCommandIndex >= commandHistory.Count) return;
-        
-        commandHistory[currentCommandIndex].Execute();
-        currentCommandIndex++;
-        //Refez o ato
     }
     public void StartReplay()
     {
@@ -105,5 +80,5 @@ public class CommandController : MonoBehaviour
             cancelReplay.gameObject.SetActive(false);
         
         Debug.Log("Replay cancelado");
-    }
+    }*/
 }

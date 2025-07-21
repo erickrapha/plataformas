@@ -10,6 +10,7 @@ public class PuzzleManager : MonoBehaviour
     public Transform gridPanel;
     
     public bool isPuzzleCompleted = false;
+    public PecaClicavel _pecaSelecionada;
     
     void Start()
     {
@@ -27,7 +28,7 @@ public class PuzzleManager : MonoBehaviour
     {
         foreach (var piece in puzzlePieces)
         {
-            if (!piece.IsCorrectlyPlaced())
+            if (!piece.IsCorrectlyPlaced(puzzlePieces.IndexOf(piece)))
                 return false;
         }
         return true;
@@ -40,6 +41,36 @@ public class PuzzleManager : MonoBehaviour
                 return true;
         }
         return false;
+    }
+    public void OnMouseDown(PecaClicavel pieceActually)
+    {
+        if (_pecaSelecionada == null)
+        {
+            _pecaSelecionada = pieceActually;
+            _pecaSelecionada.Destacar(true);
+        }
+        else if (_pecaSelecionada == pieceActually)
+        {
+            _pecaSelecionada.Destacar(false);
+            _pecaSelecionada = null;
+        }
+        else
+        {
+            TrocarPosicao(pieceActually);
+            _pecaSelecionada.Destacar(false);
+            _pecaSelecionada = null;
+        }
+    }
+    private void TrocarPosicao(PecaClicavel pieceActually)
+    {
+        int k = puzzlePieces.IndexOf(_pecaSelecionada);
+        int n = puzzlePieces.IndexOf(pieceActually);
+        
+        PecaClicavel temp = puzzlePieces[k];
+        puzzlePieces[k] = puzzlePieces[n];
+        puzzlePieces[n] = temp;
+        puzzlePieces[n].transform.SetSiblingIndex(n);
+        puzzlePieces[k].transform.SetSiblingIndex(k);
     }
 
 }
