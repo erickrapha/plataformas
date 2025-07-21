@@ -24,7 +24,7 @@ public class CommandController : MonoBehaviour
     void Update()
     {
         if (isReplaying) return;
-
+/*
         bool oneSeletionPiece = PuzzleManager.OneSeletionPiece();
         if (undoButton != null)
         {
@@ -35,7 +35,7 @@ public class CommandController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W)) ExecuteCommand(new MoveUpCommand(playerCommand));
         if (Input.GetKeyDown(KeyCode.Z)) Undo();
         if (Input.GetKeyDown(KeyCode.Y)) Redo();
-        if (Input.GetKeyDown(KeyCode.R)) StartReplay();
+        if (Input.GetKeyDown(KeyCode.R)) StartReplay();*/
     }
     void ExecuteCommand(ICommand command)
     {
@@ -52,6 +52,7 @@ public class CommandController : MonoBehaviour
         
         currentCommandIndex--;
         commandHistory[currentCommandIndex].Undo();
+       
         //Desfez o ato
     }
     void Redo()

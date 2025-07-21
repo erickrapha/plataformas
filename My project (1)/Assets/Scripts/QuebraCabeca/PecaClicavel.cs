@@ -14,9 +14,9 @@ public class PecaClicavel : MonoBehaviour
     public bool estaSelecionada;
     //[SerializeField]public Button btn;
 
-    public bool IsCorrectlyPlaced(PecaClicavel otherPiece, int positionCurrent)
+    public bool IsCorrectlyPlaced(int positionCurrent)
     {
-        return otherPiece.indiceBase == positionCurrent;  
+        return indiceBase == positionCurrent;  
         //return locationPiece == correctionLocation;
         //return Vector2.Distance(transform.position, locationPiece) < 0.1f;
     }
@@ -46,7 +46,8 @@ public class PecaClicavel : MonoBehaviour
         transform.position = otherPiece.transform.position;
         otherPiece.transform.position = tempPos;
     }
-    private void Destacar(bool ativar)
+    
+    public void Destacar(bool ativar)
     {
         GetComponent<SpriteRenderer>().material.color = ativar ? Color.yellow : Color.white;
     }

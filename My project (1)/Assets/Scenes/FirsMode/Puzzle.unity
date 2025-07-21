@@ -333,12 +333,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 827843109}
+      objectReference: {fileID: 1967483444}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -349,11 +349,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PecaClicavel, Assembly-CSharp
+      value: PuzzleManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 827843111}
+    - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: PecaClicavel, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6512148556073665732, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
+      propertyPath: indiceBase
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -362,9 +370,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1212389194987222042, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       insertIndex: -1
       addedObject: {fileID: 827843110}
-    - targetCorrespondingSourceObject: {fileID: 1212389194987222042, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 827843109}
     - targetCorrespondingSourceObject: {fileID: 1212389194987222042, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       insertIndex: -1
       addedObject: {fileID: 827843108}
@@ -490,12 +495,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2146416648}
+      objectReference: {fileID: 1967483444}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -506,11 +511,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PecaClicavel, Assembly-CSharp
+      value: PuzzleManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 2146416650}
+    - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: PecaClicavel, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6512148556073665732, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
+      propertyPath: indiceBase
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -637,12 +650,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 298356683}
+      objectReference: {fileID: 1967483444}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -653,11 +666,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PecaClicavel, Assembly-CSharp
+      value: PuzzleManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 298356685}
+    - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: PecaClicavel, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6512148556073665732, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
+      propertyPath: indiceBase
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -916,6 +937,17 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &298356685 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6512148556073665732, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
+  m_PrefabInstance: {fileID: 248797062}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298356678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61b835a068876b94c8bcf830a70faed9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &298793664
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1022,12 +1054,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 298793670}
+      objectReference: {fileID: 1967483444}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -1038,11 +1070,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PecaClicavel, Assembly-CSharp
+      value: PuzzleManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 298793672}
+    - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: PecaClicavel, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6512148556073665732, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
+      propertyPath: indiceBase
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1051,9 +1091,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1212389194987222042, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       insertIndex: -1
       addedObject: {fileID: 298793671}
-    - targetCorrespondingSourceObject: {fileID: 1212389194987222042, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 298793670}
     - targetCorrespondingSourceObject: {fileID: 1212389194987222042, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       insertIndex: -1
       addedObject: {fileID: 298793669}
@@ -1118,22 +1155,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &298793670
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 133041205}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61b835a068876b94c8bcf830a70faed9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  indiceBase: 0
-  locationPiece: {x: 0, y: 0}
-  correctionLocation: {x: 250, y: -228.6492}
-  estaSelecionada: 0
 --- !u!61 &298793671
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1180,6 +1201,17 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &298793672 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6512148556073665732, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
+  m_PrefabInstance: {fileID: 298793664}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 133041205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61b835a068876b94c8bcf830a70faed9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &375841228
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1286,12 +1318,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 375841234}
+      objectReference: {fileID: 1967483444}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -1302,11 +1334,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PecaClicavel, Assembly-CSharp
+      value: PuzzleManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 375841236}
+    - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: PecaClicavel, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6512148556073665732, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
+      propertyPath: indiceBase
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1444,6 +1484,17 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &375841236 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6512148556073665732, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
+  m_PrefabInstance: {fileID: 375841228}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 126431930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61b835a068876b94c8bcf830a70faed9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &410568333
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1550,12 +1601,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1268173995}
+      objectReference: {fileID: 1967483444}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -1566,11 +1617,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PecaClicavel, Assembly-CSharp
+      value: PuzzleManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 1268173997}
+    - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: PecaClicavel, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6512148556073665732, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
+      propertyPath: indiceBase
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1579,9 +1638,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1212389194987222042, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1268173996}
-    - targetCorrespondingSourceObject: {fileID: 1212389194987222042, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1268173995}
     - targetCorrespondingSourceObject: {fileID: 1212389194987222042, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1268173994}
@@ -1626,6 +1682,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1555142056}
+  currentCommandIndex: 0
   cancelReplay: {fileID: 524883107}
   undoButton: {fileID: 496628670}
 --- !u!4 &487432083
@@ -2382,12 +2439,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1064021828}
+      objectReference: {fileID: 1967483444}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -2398,11 +2455,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PecaClicavel, Assembly-CSharp
+      value: PuzzleManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 1064021830}
+    - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: PecaClicavel, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6512148556073665732, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
+      propertyPath: indiceBase
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2411,9 +2476,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1212389194987222042, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1064021829}
-    - targetCorrespondingSourceObject: {fileID: 1212389194987222042, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1064021828}
     - targetCorrespondingSourceObject: {fileID: 1212389194987222042, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1064021827}
@@ -2529,12 +2591,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 797369763}
+      objectReference: {fileID: 1967483444}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -2545,11 +2607,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PecaClicavel, Assembly-CSharp
+      value: PuzzleManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 797369765}
+    - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: PecaClicavel, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6512148556073665732, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
+      propertyPath: indiceBase
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2687,6 +2757,17 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &797369765 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6512148556073665732, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
+  m_PrefabInstance: {fileID: 797369757}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38961325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61b835a068876b94c8bcf830a70faed9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &827843104 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1212389194987222042, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
@@ -2747,22 +2828,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &827843109
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 827843104}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61b835a068876b94c8bcf830a70faed9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  indiceBase: 0
-  locationPiece: {x: 0, y: 0}
-  correctionLocation: {x: 250, y: -328.64923}
-  estaSelecionada: 0
 --- !u!61 &827843110
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2809,6 +2874,17 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &827843111 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6512148556073665732, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
+  m_PrefabInstance: {fileID: 55524506}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827843104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61b835a068876b94c8bcf830a70faed9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &836317023
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2915,12 +2991,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 836317029}
+      objectReference: {fileID: 1967483444}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -2931,11 +3007,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PecaClicavel, Assembly-CSharp
+      value: PuzzleManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 836317031}
+    - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: PecaClicavel, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6512148556073665732, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
+      propertyPath: indiceBase
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2944,9 +3028,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1212389194987222042, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       insertIndex: -1
       addedObject: {fileID: 836317030}
-    - targetCorrespondingSourceObject: {fileID: 1212389194987222042, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 836317029}
     - targetCorrespondingSourceObject: {fileID: 1212389194987222042, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       insertIndex: -1
       addedObject: {fileID: 836317028}
@@ -3011,22 +3092,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &836317029
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 694590690}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61b835a068876b94c8bcf830a70faed9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  indiceBase: 0
-  locationPiece: {x: 0, y: 0}
-  correctionLocation: {x: 550, y: -228.6492}
-  estaSelecionada: 0
 --- !u!61 &836317030
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3073,6 +3138,17 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &836317031 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6512148556073665732, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
+  m_PrefabInstance: {fileID: 836317023}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 694590690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61b835a068876b94c8bcf830a70faed9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &931574624
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3179,12 +3255,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1468475870}
+      objectReference: {fileID: 1967483444}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -3195,11 +3271,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PecaClicavel, Assembly-CSharp
+      value: PuzzleManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 1468475872}
+    - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: PecaClicavel, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6512148556073665732, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
+      propertyPath: indiceBase
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3392,22 +3476,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1064021828
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1064021823}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61b835a068876b94c8bcf830a70faed9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  indiceBase: 0
-  locationPiece: {x: 0, y: 0}
-  correctionLocation: {x: 450, y: -328.6492}
-  estaSelecionada: 0
 --- !u!61 &1064021829
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3454,6 +3522,17 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1064021830 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6512148556073665732, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
+  m_PrefabInstance: {fileID: 766547726}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1064021823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61b835a068876b94c8bcf830a70faed9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1069623550
 GameObject:
   m_ObjectHideFlags: 0
@@ -3810,12 +3889,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1476745113}
+      objectReference: {fileID: 1967483444}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -3826,11 +3905,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PecaClicavel, Assembly-CSharp
+      value: PuzzleManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 1476745115}
+    - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: PecaClicavel, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6512148556073665732, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
+      propertyPath: indiceBase
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3839,9 +3926,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1212389194987222042, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1476745114}
-    - targetCorrespondingSourceObject: {fileID: 1212389194987222042, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1476745113}
     - targetCorrespondingSourceObject: {fileID: 1212389194987222042, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1476745112}
@@ -3957,12 +4041,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1207419805}
+      objectReference: {fileID: 1967483444}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -3973,11 +4057,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PecaClicavel, Assembly-CSharp
+      value: PuzzleManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 1207419807}
+    - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: PecaClicavel, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6512148556073665732, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
+      propertyPath: indiceBase
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4115,6 +4207,17 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1207419807 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6512148556073665732, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
+  m_PrefabInstance: {fileID: 1207419799}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471568353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61b835a068876b94c8bcf830a70faed9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1268173990 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1212389194987222042, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
@@ -4175,22 +4278,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1268173995
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1268173990}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61b835a068876b94c8bcf830a70faed9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  indiceBase: 0
-  locationPiece: {x: 0, y: 0}
-  correctionLocation: {x: 450, y: -228.6492}
-  estaSelecionada: 0
 --- !u!61 &1268173996
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4237,6 +4324,17 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1268173997 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6512148556073665732, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
+  m_PrefabInstance: {fileID: 410568333}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268173990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61b835a068876b94c8bcf830a70faed9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1275386807
 GameObject:
   m_ObjectHideFlags: 0
@@ -4421,12 +4519,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1373400865}
+      objectReference: {fileID: 1967483444}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -4437,11 +4535,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PecaClicavel, Assembly-CSharp
+      value: PuzzleManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 1373400867}
+    - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: PecaClicavel, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6512148556073665732, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
+      propertyPath: indiceBase
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4450,9 +4556,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1212389194987222042, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1373400866}
-    - targetCorrespondingSourceObject: {fileID: 1212389194987222042, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1373400865}
     - targetCorrespondingSourceObject: {fileID: 1212389194987222042, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1373400864}
@@ -4517,22 +4620,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1373400865
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 946080169}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61b835a068876b94c8bcf830a70faed9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  indiceBase: 0
-  locationPiece: {x: 0, y: 0}
-  correctionLocation: {x: 550, y: -328.6492}
-  estaSelecionada: 0
 --- !u!61 &1373400866
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4579,6 +4666,17 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1373400867 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6512148556073665732, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
+  m_PrefabInstance: {fileID: 1373400859}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 946080169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61b835a068876b94c8bcf830a70faed9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1450174615
 GameObject:
   m_ObjectHideFlags: 0
@@ -4837,6 +4935,17 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1468475872 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6512148556073665732, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
+  m_PrefabInstance: {fileID: 931574624}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1468475865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61b835a068876b94c8bcf830a70faed9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1476745108 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1212389194987222042, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
@@ -4897,22 +5006,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1476745113
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1476745108}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61b835a068876b94c8bcf830a70faed9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  indiceBase: 0
-  locationPiece: {x: 0, y: 0}
-  correctionLocation: {x: 350, y: -328.6492}
-  estaSelecionada: 0
 --- !u!61 &1476745114
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4959,6 +5052,17 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1476745115 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6512148556073665732, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
+  m_PrefabInstance: {fileID: 1138100327}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1476745108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61b835a068876b94c8bcf830a70faed9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1555142055
 GameObject:
   m_ObjectHideFlags: 0
@@ -5232,12 +5336,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1771326583}
+      objectReference: {fileID: 1967483444}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -5248,11 +5352,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PecaClicavel, Assembly-CSharp
+      value: PuzzleManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 1771326585}
+    - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: PecaClicavel, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6512148556073665732, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
+      propertyPath: indiceBase
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5390,6 +5502,17 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1771326585 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6512148556073665732, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
+  m_PrefabInstance: {fileID: 1771326577}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 713630674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61b835a068876b94c8bcf830a70faed9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1797157077
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5496,12 +5619,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1797157083}
+      objectReference: {fileID: 1967483444}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -5512,11 +5635,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PecaClicavel, Assembly-CSharp
+      value: PuzzleManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 1797157085}
+    - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: PecaClicavel, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6512148556073665732, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
+      propertyPath: indiceBase
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5525,9 +5656,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1212389194987222042, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1797157084}
-    - targetCorrespondingSourceObject: {fileID: 1212389194987222042, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1797157083}
     - targetCorrespondingSourceObject: {fileID: 1212389194987222042, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1797157082}
@@ -5592,22 +5720,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1797157083
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 970820535}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61b835a068876b94c8bcf830a70faed9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  indiceBase: 0
-  locationPiece: {x: 0, y: 0}
-  correctionLocation: {x: 350, y: -228.64923}
-  estaSelecionada: 0
 --- !u!61 &1797157084
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5654,6 +5766,17 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1797157085 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6512148556073665732, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
+  m_PrefabInstance: {fileID: 1797157077}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 970820535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61b835a068876b94c8bcf830a70faed9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1834662683
 GameObject:
   m_ObjectHideFlags: 0
@@ -5950,16 +6073,17 @@ MonoBehaviour:
   - {fileID: 797369763}
   - {fileID: 1468475870}
   - {fileID: 1771326583}
-  - {fileID: 298793670}
-  - {fileID: 1797157083}
-  - {fileID: 1268173995}
-  - {fileID: 836317029}
-  - {fileID: 827843109}
-  - {fileID: 1476745113}
-  - {fileID: 1064021828}
-  - {fileID: 1373400865}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   gridPanel: {fileID: 284095411}
   isPuzzleCompleted: 0
+  _pecaSelecionada: {fileID: 0}
 --- !u!4 &1967483445
 Transform:
   m_ObjectHideFlags: 0
@@ -6369,6 +6493,17 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2146416650 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6512148556073665732, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
+  m_PrefabInstance: {fileID: 206305500}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2146416643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61b835a068876b94c8bcf830a70faed9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &492632709544000568
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6470,9 +6605,29 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2085852545, guid: 39fad25d69dc70b45bb374a2c1893647, type: 3}
     - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 1967483444}
+    - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnMouseDown
+      objectReference: {fileID: 0}
+    - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PuzzleManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
       objectReference: {fileID: 492632709544000574}
+    - target: {fileID: 3745932645884447798, guid: a78364b63b0296f429bc03a660df41ad, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: PecaClicavel, Assembly-CSharp
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
