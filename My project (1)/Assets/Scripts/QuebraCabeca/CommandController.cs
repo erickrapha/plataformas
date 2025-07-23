@@ -1,47 +1,56 @@
-using UnityEngine;
-using System.Collections;
+using UnityEngine.UI;
 using System.Collections.Generic;
+using System;
+using System.Collections;
+using UnityEngine;
 
-[CreateAssetMenu(fileName = "CommandController1", menuName = "Scriptable Objects/CommandController1")]
-public class S0CommandController : ScriptableObject
-{/*
-    [SerializeField] public Transform player;
-    public int currentCommandIndex = 0;
-    public Button cancelReplay;
-    public Button undoButton;
-    
-    [SerializeField] private PlayerCommand playerCommand;
-    private List<ICommand> commandHistory = new List<ICommand>();
-    private Coroutine replayCoroutine;
+public class CommandController
+{
+    private Transform player;
+    private int currentCommandIndex = 0;
+    private List<ICommand> commandHistory = new();
     private bool isReplaying = false;
+    private Coroutine replayCoroutine;
+    
+    private Button cancelReplay;
+    private Button undoButton;
+    private MonoBehaviour coroutineRunner;
 
-    void Start()
+    public bool IsReplaying => isReplaying;
+
+    public CommandController(Transform player, MonoBehaviour coroutineRunner, Button cancelReplay, Button undoButton)
     {
+        this.player = player;
+        this.coroutineRunner = coroutineRunner;
+        this.cancelReplay = cancelReplay;
+        this.undoButton = undoButton;
+        
         if (cancelReplay != null)
             cancelReplay.gameObject.SetActive(false);
+        
+        UpdateUndoButtonState(false);
     }
-    void Update()
+    public void ExecuteCommand(ICommand command)
     {
         if (isReplaying) return;
-    }
-    void ExecuteCommand(ICommand command)
-    {
         if (currentCommandIndex < commandHistory.Count)
             commandHistory.RemoveRange(currentCommandIndex, commandHistory.Count - currentCommandIndex);
         
         command.Execute();
         commandHistory.Add(command);
         currentCommandIndex++;
+        UpdateUndoButtonState(false);
     }
     public void Undo()
     {
-        if (currentCommandIndex == 0) return;
+        if (currentCommandIndex == 0 || isReplaying) return;
         
         currentCommandIndex--;
         commandHistory[currentCommandIndex].Undo();
+        UpdateUndoButtonState(false);
         //Desfez o ato
     }
-    public void StartReplay()
+    /*public void StartReplay()
     {
         if (commandHistory.Count == 0 || isReplaying) return;
         
@@ -84,4 +93,10 @@ public class S0CommandController : ScriptableObject
         
         Debug.Log("Replay cancelado");
     }*/
+
+    public void UpdateUndoButtonState(bool OnePieceSelection)
+    {
+        if (undoButton != null)
+            undoButton.interactable = !OnePieceSelection && currentCommandIndex > 0 && !isReplaying;
+    }
 }
