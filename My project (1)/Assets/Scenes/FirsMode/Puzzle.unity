@@ -1697,7 +1697,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1555142056}
-  currentCommandIndex: 0
   cancelReplay: {fileID: 524883107}
   undoButton: {fileID: 496628670}
 --- !u!4 &487432083
@@ -1799,8 +1798,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 487432082}
-        m_TargetAssemblyTypeName: CommandController, Assembly-CSharp
-        m_MethodName: Undo
+        m_TargetAssemblyTypeName: MonoCommandController, Assembly-CSharp
+        m_MethodName: CancelReplay
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5888,7 +5887,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 487432082}
-        m_TargetAssemblyTypeName: CommandController, Assembly-CSharp
+        m_TargetAssemblyTypeName: MonoCommandController, Assembly-CSharp
         m_MethodName: StartReplay
         m_Mode: 1
         m_Arguments:
@@ -6093,21 +6092,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   puzzlePieces:
   - {fileID: 492632709544000574}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 375841236}
+  - {fileID: 298356685}
+  - {fileID: 2146416650}
+  - {fileID: 1207419807}
+  - {fileID: 797369765}
+  - {fileID: 1468475872}
+  - {fileID: 1771326585}
+  - {fileID: 298793672}
+  - {fileID: 1797157085}
+  - {fileID: 1268173997}
+  - {fileID: 836317031}
+  - {fileID: 827843111}
+  - {fileID: 1476745115}
+  - {fileID: 1064021830}
+  - {fileID: 1373400867}
   gridPanel: {fileID: 284095411}
   isPuzzleCompleted: 0
   _pecaSelecionada: {fileID: 0}

@@ -6,17 +6,16 @@ using UnityEngine;
 
 public class CommandController
 {
+    public bool IsReplaying => isReplaying;
+    
     private Transform player;
     private int currentCommandIndex = 0;
     private List<ICommand> commandHistory = new();
     private bool isReplaying = false;
     private Coroutine replayCoroutine;
-    
     private Button cancelReplay;
     private Button undoButton;
     private MonoBehaviour coroutineRunner;
-
-    public bool IsReplaying => isReplaying;
 
     public CommandController(Transform player, MonoBehaviour coroutineRunner, Button cancelReplay, Button undoButton)
     {
@@ -44,17 +43,27 @@ public class CommandController
     public void Undo()
     {
         if (currentCommandIndex == 0 || isReplaying) return;
-        
         currentCommandIndex--;
         commandHistory[currentCommandIndex].Undo();
         UpdateUndoButtonState(false);
         //Desfez o ato
     }
-    /*public void StartReplay()
+    public void StartReplay()
     {
         if (commandHistory.Count == 0 || isReplaying) return;
+        replayCoroutine = coroutineRunner.StartCoroutine(Replay());
+    }
+    public void CancelReplay()
+    {
+        if (!isReplaying) return;
+        isReplaying = false;
+        if (replayCoroutine != null)
+            coroutineRunner.StopCoroutine(replayCoroutine);
         
-        replayCoroutine = StartCoroutine(Replay());
+        if (cancelReplay != null)
+            cancelReplay.gameObject.SetActive(false);
+        
+        Debug.Log("Replay cancelado");
     }
     private IEnumerator Replay()
     {
@@ -76,27 +85,12 @@ public class CommandController
         if (cancelReplay != null)
             cancelReplay.gameObject.SetActive(false);
         
-        PuzzleManager manager = FindFirstObjectByType<PuzzleManager>();
-        if (manager != null)
-            manager.CheckPuzzleCompletion();
+        PuzzleManager manager = UnityEngine.Object.FindFirstObjectByType<PuzzleManager>();
+        manager?.CheckPuzzleCompletion();
     }
-    public void CancelReplay()
-    {
-        if (!isReplaying) return;
-        
-        isReplaying = false;
-        if (replayCoroutine != null)
-            StopCoroutine(replayCoroutine);
-        
-        if (cancelReplay != null)
-            cancelReplay.gameObject.SetActive(false);
-        
-        Debug.Log("Replay cancelado");
-    }*/
-
-    public void UpdateUndoButtonState(bool OnePieceSelection)
+    public void UpdateUndoButtonState(bool onePieceSelection)
     {
         if (undoButton != null)
-            undoButton.interactable = !OnePieceSelection && currentCommandIndex > 0 && !isReplaying;
+            undoButton.interactable = !onePieceSelection && currentCommandIndex > 0 && !isReplaying;
     }
 }

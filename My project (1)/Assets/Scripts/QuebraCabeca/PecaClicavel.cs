@@ -17,31 +17,6 @@ public class PecaClicavel : MonoBehaviour
     {
         return indiceBase == positionCurrent;  
     }
-    /*public void OnMouseDown()
-    {
-        if (_pecaSelecionada == null)
-        {
-            _pecaSelecionada = this;
-            Destacar(true);
-        }
-        else if (_pecaSelecionada == this)
-        {
-            Destacar(false);
-            _pecaSelecionada = null;
-        }
-        else
-        {
-            TrocarPosicao(_pecaSelecionada);
-            _pecaSelecionada.Destacar(false);
-            _pecaSelecionada = null;
-        }
-    }
-    private void TrocarPosicao(PecaClicavel otherPiece)
-    {
-        Vector2 tempPos = transform.position;
-        transform.position = otherPiece.transform.position;
-        otherPiece.transform.position = tempPos;
-    }*/
     public void Destacar(bool ativar)
     {
         GetComponent<SpriteRenderer>().material.color = ativar ? Color.yellow : Color.white;
