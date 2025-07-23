@@ -1,8 +1,6 @@
 using UnityEngine;
 using System;
 using System.Collections.Generic;
-using NUnit.Framework;
-using static UnityEngine.Debug;
 
 public class PuzzleManager : MonoBehaviour
 {
@@ -33,7 +31,7 @@ public class PuzzleManager : MonoBehaviour
         }
         return true;
     }
-    public static bool OneSeletionPiece()
+    private bool OneSeletionPiece()
     {
         foreach (var piece in FindObjectsOfType<PecaClicavel>())
         {

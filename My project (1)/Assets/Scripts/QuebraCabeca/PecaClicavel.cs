@@ -1,8 +1,4 @@
-using NUnit.Framework;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.TextCore;
-using static UnityEngine.Color;
 
 public class PecaClicavel : MonoBehaviour
 {

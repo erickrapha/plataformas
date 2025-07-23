@@ -4,10 +4,9 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    public static UIManager instance;
-    
+    private static UIManager instance;
+    private bool puzzleCompleted = false;
     [SerializeField] private GameObject victoryScreen;
-    public bool puzzleCompleted = false;
     
     private void Awake()
     {

@@ -29,7 +29,7 @@ public class MonoCommandController : MonoBehaviour
     {
         commandController.CancelReplay();
     }
-    public void OnePieceSeletion(bool estaSelecionado)
+    private void OnePieceSeletion(bool estaSelecionado)
     {
         commandController.UpdateUndoButtonState(estaSelecionado);
     }
