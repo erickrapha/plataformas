@@ -1,6 +1,7 @@
 using UnityEngine;
 using System;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class PuzzleManager : MonoBehaviour
 {
@@ -10,6 +11,16 @@ public class PuzzleManager : MonoBehaviour
     public bool isPuzzleCompleted = false;
     public PecaClicavel _pecaSelecionada;
     
+    public Transform player;
+    public Button cancelReplay;
+    public Button undoButton;
+    
+    private CommandController commandController;
+    
+    private void Awake()
+    {
+        commandController = new CommandController(this, cancelReplay, undoButton);
+    }
     void Start()
     {
         QuebraCabeca.Embaralhar(puzzlePieces, gridPanel);
@@ -54,7 +65,8 @@ public class PuzzleManager : MonoBehaviour
         }
         else
         {
-            TrocarPosicao(pieceActually);
+            //TrocarPosicao(pieceActually);
+            commandController.ExecuteCommand(new TrocarPosicao(puzzlePieces, _pecaSelecionada, pieceActually));
             _pecaSelecionada.Destacar(false);
             _pecaSelecionada = null;
         }
@@ -69,6 +81,11 @@ public class PuzzleManager : MonoBehaviour
         puzzlePieces[n] = temp;
         puzzlePieces[n].transform.SetSiblingIndex(n);
         puzzlePieces[k].transform.SetSiblingIndex(k);
+    }
+
+    public void Desfazer()
+    {
+        commandController.Undo();
     }
 
 }

@@ -8,7 +8,7 @@ public class CommandController
 {
     public bool IsReplaying => isReplaying;
     
-    private Transform player;
+    
     private int currentCommandIndex = 0;
     private List<ICommand> commandHistory = new();
     private bool isReplaying = false;
@@ -17,9 +17,8 @@ public class CommandController
     private Button undoButton;
     private MonoBehaviour coroutineRunner;
 
-    public CommandController(Transform player, MonoBehaviour coroutineRunner, Button cancelReplay, Button undoButton)
+    public CommandController(MonoBehaviour coroutineRunner, Button cancelReplay, Button undoButton)
     {
-        this.player = player;
         this.coroutineRunner = coroutineRunner;
         this.cancelReplay = cancelReplay;
         this.undoButton = undoButton;
@@ -71,7 +70,6 @@ public class CommandController
         if (cancelReplay != null)
             cancelReplay.gameObject.SetActive(true);
 
-        player.position = Vector2.zero;
         currentCommandIndex = 0;
         
         foreach (var command in commandHistory)
