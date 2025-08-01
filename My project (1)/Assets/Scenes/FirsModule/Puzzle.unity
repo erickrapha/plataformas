@@ -1582,7 +1582,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &496628669
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1600,7 +1600,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 316, y: 171}
+  m_AnchoredPosition: {x: 291, y: 141}
   m_SizeDelta: {x: 184.7861, y: 41.9923}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &496628670
@@ -1917,9 +1917,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: CommandController, Assembly-CSharp
-        m_MethodName: CancelReplay
+      - m_Target: {fileID: 1967483444}
+        m_TargetAssemblyTypeName: PuzzleManager, Assembly-CSharp
+        m_MethodName: CancelarReplay
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5622,9 +5622,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MonoCommandController, Assembly-CSharp
-        m_MethodName: StartReplay
+      - m_Target: {fileID: 1967483444}
+        m_TargetAssemblyTypeName: PuzzleManager, Assembly-CSharp
+        m_MethodName: TheReplay
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5846,6 +5846,7 @@ MonoBehaviour:
   isPuzzleCompleted: 0
   _pecaSelecionada: {fileID: 0}
   player: {fileID: 1555142056}
+  theReplay: {fileID: 0}
   cancelReplay: {fileID: 524883107}
   undoButton: {fileID: 496628670}
 --- !u!4 &1967483445

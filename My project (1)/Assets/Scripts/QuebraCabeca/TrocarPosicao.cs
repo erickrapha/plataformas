@@ -13,17 +13,14 @@ public class TrocarPosicao : ICommand
         this._pecaSelecionada = _pecaSelecionada;
         this.pieceActually = pieceActually;
     }
-
     public void Execute()
     {
         TrocaPosicao();
     }
-
     public void Undo()
     {
         TrocaPosicao();
     }
-    
     private void TrocaPosicao()
     {
         int k = puzzlePieces.IndexOf(_pecaSelecionada);

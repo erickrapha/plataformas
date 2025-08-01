@@ -86,7 +86,7 @@ public class CommandController
         PuzzleManager manager = UnityEngine.Object.FindFirstObjectByType<PuzzleManager>();
         manager?.CheckPuzzleCompletion();
     }
-    public void UpdateUndoButtonState(bool onePieceSelection)
+    void UpdateUndoButtonState(bool onePieceSelection)
     {
         if (undoButton != null)
             undoButton.interactable = !onePieceSelection && currentCommandIndex > 0 && !isReplaying;

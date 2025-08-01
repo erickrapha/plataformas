@@ -5,17 +5,16 @@ using UnityEngine.UI;
 
 public class PuzzleManager : MonoBehaviour
 {
+    private CommandController commandController;
     [SerializeField] private List<PecaClicavel> puzzlePieces;
-    public Transform gridPanel;
     
+    public Transform gridPanel;
     public bool isPuzzleCompleted = false;
     public PecaClicavel _pecaSelecionada;
-    
     public Transform player;
+    public Button theReplay;
     public Button cancelReplay;
     public Button undoButton;
-    
-    private CommandController commandController;
     
     private void Awake()
     {
@@ -65,7 +64,6 @@ public class PuzzleManager : MonoBehaviour
         }
         else
         {
-            //TrocarPosicao(pieceActually);
             commandController.ExecuteCommand(new TrocarPosicao(puzzlePieces, _pecaSelecionada, pieceActually));
             _pecaSelecionada.Destacar(false);
             _pecaSelecionada = null;
@@ -82,12 +80,18 @@ public class PuzzleManager : MonoBehaviour
         puzzlePieces[n].transform.SetSiblingIndex(n);
         puzzlePieces[k].transform.SetSiblingIndex(k);
     }
-
     public void Desfazer()
     {
         commandController.Undo();
     }
-
+    public void CancelarReplay()
+    {
+        commandController.CancelReplay();
+    }
+    public void TheReplay()
+    {
+        commandController.StartReplay();
+    }
 }
 
 
