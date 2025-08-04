@@ -30,6 +30,7 @@ public class PuzzleManager : MonoBehaviour
         {
             isPuzzleCompleted = true;
             Debug.Log("O Puzzle está completo");
+            UIManager.instance.ShowVictoryScreen();
         }
     }
     public bool CheckPuzzleCompletion()

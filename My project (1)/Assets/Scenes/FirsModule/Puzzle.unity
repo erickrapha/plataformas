@@ -3444,7 +3444,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1069623551
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4872,7 +4872,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1645560106
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5557,7 +5557,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1834662684
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5575,8 +5575,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 167.7, y: -79.996315}
-  m_SizeDelta: {x: 233.69, y: 42.4234}
+  m_AnchoredPosition: {x: 241.4, y: -100.3}
+  m_SizeDelta: {x: 152.9603, y: 42.4234}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1834662685
 MonoBehaviour:
@@ -5780,7 +5780,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5878acb9214d6184ca6a02cec025828e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resetPuzzle: {fileID: 1069623552}
   victoryScreen: {fileID: 1275386807}
+  victoryText: {fileID: 0}
+  restartPuzzle: {fileID: 1069623552}
+  replay: {fileID: 1834662685}
 --- !u!4 &1900711712
 Transform:
   m_ObjectHideFlags: 0
@@ -5846,7 +5850,7 @@ MonoBehaviour:
   isPuzzleCompleted: 0
   _pecaSelecionada: {fileID: 0}
   player: {fileID: 1555142056}
-  theReplay: {fileID: 0}
+  theReplay: {fileID: 1834662685}
   cancelReplay: {fileID: 524883107}
   undoButton: {fileID: 496628670}
 --- !u!4 &1967483445
