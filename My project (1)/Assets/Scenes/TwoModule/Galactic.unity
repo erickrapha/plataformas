@@ -443,7 +443,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 622396104}
   serializedVersion: 8
-  lengthInSec: 10
+  lengthInSec: 5
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -458,7 +458,7 @@ ParticleSystem:
   startDelay:
     serializedVersion: 2
     minMaxState: 0
-    scalar: 0
+    scalar: 1
     minScalar: 0
     maxCurve:
       serializedVersion: 2
@@ -517,8 +517,8 @@ ParticleSystem:
     enabled: 1
     startLifetime:
       serializedVersion: 2
-      minMaxState: 3
-      scalar: 0.5
+      minMaxState: 0
+      scalar: 9999
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -571,7 +571,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.8
+      scalar: 0
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -688,9 +688,9 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     startSize:
       serializedVersion: 2
-      minMaxState: 0
-      scalar: 0.05
-      minScalar: 1
+      minMaxState: 3
+      scalar: 0.1
+      minScalar: 0.02
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -741,7 +741,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeY:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -794,7 +794,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeZ:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -5167,8 +5167,8 @@ Transform:
   m_GameObject: {fileID: 622396104}
   serializedVersion: 2
   m_LocalRotation: {x: -0.50955707, y: -0.49025667, z: 0.49025667, w: 0.50955707}
-  m_LocalPosition: {x: -1.1, y: 0.04, z: 2.0184042}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.09, y: 0, z: 2.0184042}
+  m_LocalScale: {x: 330.83905, y: 465.77365, z: 465.77365}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -5184,7 +5184,7 @@ GameObject:
   - component: {fileID: 1178084143}
   - component: {fileID: 1178084142}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Vacuum
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5272,7 +5272,7 @@ GameObject:
   - component: {fileID: 1470249686}
   - component: {fileID: 1470249685}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: NebulaParticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
