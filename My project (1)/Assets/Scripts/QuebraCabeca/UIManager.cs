@@ -4,14 +4,12 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    public Button resetPuzzle;
+    public Button resetPuzzleButton;
+    public Button desfazerButton;
     public static UIManager instance;
     
     private bool puzzleCompleted = false;
     [SerializeField] private GameObject victoryScreen;
-    [SerializeField] private Text victoryText;
-    [SerializeField] private Button restartPuzzle;
-    [SerializeField] private Button replay;
 
     private void Awake()
     {
@@ -24,7 +22,7 @@ public class UIManager : MonoBehaviour
     }
     private void Start()
     {
-        resetPuzzle.onClick.AddListener(ResetPuzzle);
+        resetPuzzleButton.onClick.AddListener(ResetPuzzle);
     }
     public void OnPiecePlacedCorrectly()
     {
@@ -37,10 +35,8 @@ public class UIManager : MonoBehaviour
     public void ShowVictoryScreen()
     {
         victoryScreen.SetActive(true);
-        /*victoryText.text.SetActive(true);
-        restartPuzzle.button.SetActive(true);
-        replay.button.SetActive(true);*/
         Time.timeScale = 0f;
+        //desfazerButton.SetActive(false);
     }
     public void ResetPuzzle()
     {
