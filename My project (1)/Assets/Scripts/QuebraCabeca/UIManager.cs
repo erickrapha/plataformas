@@ -34,9 +34,10 @@ public class UIManager : MonoBehaviour
     }
     public void ShowVictoryScreen()
     {
-        victoryScreen.SetActive(true);
         Time.timeScale = 0f;
-        //desfazerButton.SetActive(false);
+        victoryScreen.SetActive(true);
+        if (desfazerButton != null)
+            desfazerButton.gameObject.SetActive(false);
     }
     public void ResetPuzzle()
     {

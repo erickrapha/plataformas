@@ -7,6 +7,7 @@ public class PuzzleManager : MonoBehaviour
 {
     private CommandController commandController;
     [SerializeField] private List<PecaClicavel> puzzlePieces;
+    [SerializeField] private GameObject victoryScreen;
     
     public Transform gridPanel;
     public bool isPuzzleCompleted = false;
@@ -92,6 +93,11 @@ public class PuzzleManager : MonoBehaviour
     public void TheReplay()
     {
         commandController.StartReplay();
+        if (victoryScreen != null)
+        {
+            Time.timeScale = 0f;
+            victoryScreen.SetActive(false);
+        }
     }
 }
 

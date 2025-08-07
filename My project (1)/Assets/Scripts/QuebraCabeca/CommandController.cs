@@ -69,7 +69,7 @@ public class CommandController
         isReplaying = true;
         if (cancelReplay != null)
             cancelReplay.gameObject.SetActive(true);
-
+        
         currentCommandIndex = 0;
         
         foreach (var command in commandHistory)
