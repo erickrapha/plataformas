@@ -85,6 +85,10 @@ public class PuzzleManager : MonoBehaviour
     public void Desfazer()
     {
         commandController.Undo();
+        if (undoButton != null)
+        {
+            undoButton.gameObject.SetActive(true);
+        }
     }
     public void CancelarReplay()
     {
@@ -99,10 +103,19 @@ public class PuzzleManager : MonoBehaviour
     {
         commandController.StartReplay();
         if (victoryScreen != null)
-        {
-            Time.timeScale = 0f;
             victoryScreen.SetActive(false);
+
+        if (undoButton != null)
+            undoButton.interactable = false;
+        
+        isPuzzleCompleted = false;
+
+        if (_pecaSelecionada != null)
+        {
+            _pecaSelecionada.Destacar(false);
+            _pecaSelecionada = null;
         }
+        commandController.StartReplay();
     }
 }
 
