@@ -89,6 +89,11 @@ public class PuzzleManager : MonoBehaviour
     public void CancelarReplay()
     {
         commandController.CancelReplay();
+        if (victoryScreen != null)
+        {
+            Time.timeScale = 0f;
+            victoryScreen.SetActive(true);
+        }
     }
     public void TheReplay()
     {

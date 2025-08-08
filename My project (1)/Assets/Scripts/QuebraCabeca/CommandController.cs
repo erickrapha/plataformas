@@ -8,7 +8,6 @@ public class CommandController
 {
     public bool IsReplaying => isReplaying;
     
-    
     private int currentCommandIndex = 0;
     private List<ICommand> commandHistory = new();
     private bool isReplaying = false;
@@ -71,7 +70,6 @@ public class CommandController
             cancelReplay.gameObject.SetActive(true);
         
         currentCommandIndex = 0;
-        
         foreach (var command in commandHistory)
         {
             if (!isReplaying) yield break;
