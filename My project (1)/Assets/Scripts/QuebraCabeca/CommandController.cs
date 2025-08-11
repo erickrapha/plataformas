@@ -56,7 +56,7 @@ public class CommandController
         {
             coroutineRunner.StopCoroutine(replayCoroutine);
         }
-        replayCoroutine = coroutineRunner.StartCoroutine(Replay());
+        replayCoroutine = coroutineRunner.StartCoroutine(ReplayFromStart());
     }
     public void CancelReplay()
     {
@@ -72,7 +72,7 @@ public class CommandController
         
         Debug.Log("Replay cancelado");
     }
-    private IEnumerator Replay()
+    private IEnumerator ReplayFromStart()
     {
         isReplaying = true;
         
@@ -82,7 +82,7 @@ public class CommandController
         for (int i = currentCommandIndex - 1; i > 0; i--)
         {
             commandHistory[i].Undo();
-            yield return new WaitForSeconds(0f);
+            yield return new WaitForSeconds(0.1f);
         }
         currentCommandIndex = 0;
         

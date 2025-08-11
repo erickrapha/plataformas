@@ -12,7 +12,6 @@ public class PuzzleManager : MonoBehaviour
     public Transform gridPanel;
     public bool isPuzzleCompleted = false;
     public PecaClicavel _pecaSelecionada;
-    public Transform player;
     public Button theReplay;
     public Button cancelReplay;
     public Button undoButton;
@@ -95,13 +94,12 @@ public class PuzzleManager : MonoBehaviour
         commandController.CancelReplay();
         if (victoryScreen != null)
         {
-            Time.timeScale = 0f;
+            //Time.timeScale = 0f;
             victoryScreen.SetActive(true);
         }
     }
     public void TheReplay()
     {
-        commandController.StartReplay();
         if (victoryScreen != null)
             victoryScreen.SetActive(false);
 
@@ -115,7 +113,7 @@ public class PuzzleManager : MonoBehaviour
             _pecaSelecionada.Destacar(false);
             _pecaSelecionada = null;
         }
-        commandController.StartReplay();
+        //theReplay.StartReplay();
     }
 }
 
