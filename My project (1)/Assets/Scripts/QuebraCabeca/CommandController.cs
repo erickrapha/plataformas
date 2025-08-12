@@ -1,7 +1,6 @@
-using UnityEngine.UI;
-using System.Collections.Generic;
-using System;
 using System.Collections;
+using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class CommandController
@@ -79,20 +78,25 @@ public class CommandController
         if (cancelReplay != null)
             cancelReplay.gameObject.SetActive(true);
         
+        
+        
         for (int i = currentCommandIndex - 1; i > 0; i--)
         {
+            
             commandHistory[i].Undo();
-            yield return new WaitForSeconds(0.1f);
         }
         currentCommandIndex = 0;
         
         foreach (var command in commandHistory)
         {
+            
             if (!isReplaying) yield break;
             
             command.Execute();
             currentCommandIndex++;
-            yield return new WaitForSeconds(0.5f);
+            
+            yield return new WaitForSeconds(1);
+            Debug.Log("StartReplay");
         }
         isReplaying = false;
         

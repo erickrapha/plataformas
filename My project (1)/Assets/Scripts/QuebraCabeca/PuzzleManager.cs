@@ -12,7 +12,7 @@ public class PuzzleManager : MonoBehaviour
     public Transform gridPanel;
     public bool isPuzzleCompleted = false;
     public PecaClicavel _pecaSelecionada;
-    public Button theReplay;
+    public Button replayCoroutine;
     public Button cancelReplay;
     public Button undoButton;
     
@@ -104,7 +104,7 @@ public class PuzzleManager : MonoBehaviour
             victoryScreen.SetActive(false);
 
         if (undoButton != null)
-            undoButton.interactable = false;
+            undoButton.gameObject.SetActive(false);
         
         isPuzzleCompleted = false;
 

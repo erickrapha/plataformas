@@ -3217,7 +3217,7 @@ GameObject:
   - component: {fileID: 1017838536}
   - component: {fileID: 1017838535}
   m_Layer: 5
-  m_Name: Canvas01
+  m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5848,7 +5848,6 @@ MonoBehaviour:
   gridPanel: {fileID: 284095411}
   isPuzzleCompleted: 0
   _pecaSelecionada: {fileID: 0}
-  player: {fileID: 1555142056}
   theReplay: {fileID: 1834662685}
   cancelReplay: {fileID: 524883107}
   undoButton: {fileID: 496628670}
