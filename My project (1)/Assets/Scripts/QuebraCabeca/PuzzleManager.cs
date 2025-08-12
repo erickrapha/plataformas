@@ -94,7 +94,7 @@ public class PuzzleManager : MonoBehaviour
         commandController.CancelReplay();
         if (victoryScreen != null)
         {
-            //Time.timeScale = 0f;
+            Time.timeScale = 0f;
             victoryScreen.SetActive(true);
         }
     }
@@ -113,7 +113,7 @@ public class PuzzleManager : MonoBehaviour
             _pecaSelecionada.Destacar(false);
             _pecaSelecionada = null;
         }
-        //theReplay.StartReplay();
+        commandController.StartReplay();
     }
 }
 
