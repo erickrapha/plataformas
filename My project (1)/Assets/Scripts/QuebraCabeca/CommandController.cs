@@ -8,7 +8,6 @@ public class CommandController
 {
     public bool IsReplaying => isReplaying;
     
-    
     private int currentCommandIndex = 0;
     private List<ICommand> commandHistory = new();
     private bool isReplaying = false;
@@ -31,6 +30,7 @@ public class CommandController
     public void ExecuteCommand(ICommand command)
     {
         if (isReplaying) return;
+        
         if (currentCommandIndex < commandHistory.Count)
             commandHistory.RemoveRange(currentCommandIndex, commandHistory.Count - currentCommandIndex);
         
@@ -42,6 +42,7 @@ public class CommandController
     public void Undo()
     {
         if (currentCommandIndex == 0 || isReplaying) return;
+        
         currentCommandIndex--;
         commandHistory[currentCommandIndex].Undo();
         UpdateUndoButtonState(false);
@@ -50,12 +51,19 @@ public class CommandController
     public void StartReplay()
     {
         if (commandHistory.Count == 0 || isReplaying) return;
-        replayCoroutine = coroutineRunner.StartCoroutine(Replay());
+        
+        if (replayCoroutine != null)
+        {
+            coroutineRunner.StopCoroutine(replayCoroutine);
+        }
+        replayCoroutine = coroutineRunner.StartCoroutine(ReplayFromStart());
     }
     public void CancelReplay()
     {
         if (!isReplaying) return;
+        
         isReplaying = false;
+        
         if (replayCoroutine != null)
             coroutineRunner.StopCoroutine(replayCoroutine);
         
@@ -64,12 +72,18 @@ public class CommandController
         
         Debug.Log("Replay cancelado");
     }
-    private IEnumerator Replay()
+    private IEnumerator ReplayFromStart()
     {
         isReplaying = true;
+        
         if (cancelReplay != null)
             cancelReplay.gameObject.SetActive(true);
-
+        
+        for (int i = currentCommandIndex - 1; i > 0; i--)
+        {
+            commandHistory[i].Undo();
+            yield return new WaitForSeconds(0.1f);
+        }
         currentCommandIndex = 0;
         
         foreach (var command in commandHistory)
@@ -77,9 +91,11 @@ public class CommandController
             if (!isReplaying) yield break;
             
             command.Execute();
+            currentCommandIndex++;
             yield return new WaitForSeconds(0.5f);
         }
         isReplaying = false;
+        
         if (cancelReplay != null)
             cancelReplay.gameObject.SetActive(false);
         

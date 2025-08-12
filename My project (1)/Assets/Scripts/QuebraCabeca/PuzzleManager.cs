@@ -7,11 +7,11 @@ public class PuzzleManager : MonoBehaviour
 {
     private CommandController commandController;
     [SerializeField] private List<PecaClicavel> puzzlePieces;
+    [SerializeField] private GameObject victoryScreen;
     
     public Transform gridPanel;
     public bool isPuzzleCompleted = false;
     public PecaClicavel _pecaSelecionada;
-    public Transform player;
     public Button theReplay;
     public Button cancelReplay;
     public Button undoButton;
@@ -84,13 +84,35 @@ public class PuzzleManager : MonoBehaviour
     public void Desfazer()
     {
         commandController.Undo();
+        if (undoButton != null)
+        {
+            undoButton.gameObject.SetActive(true);
+        }
     }
     public void CancelarReplay()
     {
         commandController.CancelReplay();
+        if (victoryScreen != null)
+        {
+            Time.timeScale = 0f;
+            victoryScreen.SetActive(true);
+        }
     }
     public void TheReplay()
     {
+        if (victoryScreen != null)
+            victoryScreen.SetActive(false);
+
+        if (undoButton != null)
+            undoButton.interactable = false;
+        
+        isPuzzleCompleted = false;
+
+        if (_pecaSelecionada != null)
+        {
+            _pecaSelecionada.Destacar(false);
+            _pecaSelecionada = null;
+        }
         commandController.StartReplay();
     }
 }
