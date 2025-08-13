@@ -1,5 +1,4 @@
 using UnityEngine;
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
@@ -10,11 +9,12 @@ public class PuzzleManager : MonoBehaviour
     [SerializeField] private GameObject victoryScreen;
     private int currentCommandIndex = 0;
     private List<ICommand> commandHistory = new();
-    private bool isReplaying = false;
+    private bool isReplaying;
     private Coroutine replayCoroutineInstance;
+    private float replayDelay = 0.2f;
     
     public Transform gridPanel;
-    public bool isPuzzleCompleted = false;
+    public bool isPuzzleCompleted;
     public PecaClicavel _pecaSelecionada;
     public Button cancelReplay;
     public Button undoButton;
@@ -22,12 +22,8 @@ public class PuzzleManager : MonoBehaviour
     
     private void Awake()
     {
-        if (cancelReplay != null)
-            cancelReplay.gameObject.SetActive(false);
-        
-        if (replayButton != null)
-            replayButton.gameObject.SetActive(false);
-
+        if (cancelReplay != null) cancelReplay.gameObject.SetActive(false);
+        if (replayButton != null) replayButton.gameObject.SetActive(false);
         UpdateUndoButtonState(false);
     }
     void Start()
@@ -41,9 +37,7 @@ public class PuzzleManager : MonoBehaviour
             isPuzzleCompleted = true;
             Debug.Log("O Puzzle está completo");
             UIManager.instance.ShowVictoryScreen();
-            
-            if (replayButton != null)
-                replayButton.gameObject.SetActive(true);
+            if (replayButton != null) replayButton.gameObject.SetActive(true);
         }
     }
     public bool CheckPuzzleCompletion()
@@ -66,6 +60,8 @@ public class PuzzleManager : MonoBehaviour
     }
     public void OnMouseDown(PecaClicavel pieceActually)
     {
+        if (isReplaying) return;
+        
         if (_pecaSelecionada == null)
         {
             _pecaSelecionada = pieceActually;
@@ -104,7 +100,8 @@ public class PuzzleManager : MonoBehaviour
         command.Execute();
         commandHistory.Add(command);
         currentCommandIndex++;
-        UpdateUndoButtonState(false);
+        
+        UpdateUndoButtonState(OneSeletionPiece());
     }
     public void Desfazer()
     {
@@ -112,7 +109,7 @@ public class PuzzleManager : MonoBehaviour
         
         currentCommandIndex--;
         commandHistory[currentCommandIndex].Undo();
-        UpdateUndoButtonState(false);
+        UpdateUndoButtonState(OneSeletionPiece());
         
         if (undoButton != null)
             undoButton.gameObject.SetActive(true);
@@ -125,39 +122,33 @@ public class PuzzleManager : MonoBehaviour
         if (replayCoroutineInstance != null)
             StopCoroutine(replayCoroutineInstance);
         
-        replayCoroutineInstance = StartCoroutine(ReplayFromStart());
+        replayCoroutineInstance = StartCoroutine(ReplayPreviousGame());
     }
     public void CancelReplay()
     {
         if (!isReplaying) return;
         
         isReplaying = false;
-        
         if (replayCoroutineInstance != null)
             StopCoroutine(replayCoroutineInstance);
         
-        if (cancelReplay != null)
-            cancelReplay.gameObject.SetActive(false);
-
-        if (victoryScreen != null)
-        {
-            Time.timeScale = 0f;
-            victoryScreen.SetActive(true);
-        }
+        if (cancelReplay != null) cancelReplay.gameObject.SetActive(false);
+        if (victoryScreen != null) victoryScreen.SetActive(true);
+        
         Debug.Log("Replay cancelado");
     }
-    private IEnumerator ReplayFromStart()
+    private IEnumerator ReplayPreviousGame()
     {
         isReplaying = true;
+        if (cancelReplay != null) cancelReplay.gameObject.SetActive(true);
         
-        if (cancelReplay != null)
-            cancelReplay.gameObject.SetActive(true);
-        
-        for (int i = currentCommandIndex - 1; i > 0; i--)
+        for (int i = currentCommandIndex - 1; i >= 0; i--)
         {
             commandHistory[i].Undo();
+            yield return null;
         }
         currentCommandIndex = 0;
+        yield return new WaitForSeconds(0.5f);
         
         foreach (var command in commandHistory)
         {
@@ -165,15 +156,17 @@ public class PuzzleManager : MonoBehaviour
             
             command.Execute();
             currentCommandIndex++;
-            
-            yield return new WaitForSeconds(5.0f);
+            yield return new WaitForSeconds(replayDelay);
         }
         isReplaying = false;
-        
-        if (cancelReplay != null)
-            cancelReplay.gameObject.SetActive(false);
-        
-        CheckPuzzleCompletion();
+        if (cancelReplay != null) cancelReplay.gameObject.SetActive(false);
+
+        if (CheckPuzzleCompletion())
+        {
+            isPuzzleCompleted = true;
+            UIManager.instance.ShowVictoryScreen();
+        }
+        if (replayButton != null) replayButton.gameObject.SetActive(true);
     }
     void UpdateUndoButtonState(bool onePieceSelection)
     {
@@ -182,11 +175,8 @@ public class PuzzleManager : MonoBehaviour
     }
     public void TheReplay()
     {
-        if (victoryScreen != null)
-            victoryScreen.SetActive(false);
-
-        if (undoButton != null)
-            undoButton.gameObject.SetActive(false);
+        if (victoryScreen != null) victoryScreen.SetActive(false);
+        if (undoButton != null) undoButton.gameObject.SetActive(false);
         
         isPuzzleCompleted = false;
 
@@ -195,6 +185,7 @@ public class PuzzleManager : MonoBehaviour
             _pecaSelecionada.Destacar(false);
             _pecaSelecionada = null;
         }
+        
         StartReplay();
     }
 }
