@@ -11,7 +11,7 @@ public class PuzzleManager : MonoBehaviour
     private List<ICommand> commandHistory = new();
     private bool isReplaying;
     private Coroutine replayCoroutineInstance;
-    private float replayDelay = 0.2f;
+    private float replayDelay = 0.9f;
     
     public Transform gridPanel;
     public bool isPuzzleCompleted;
@@ -24,6 +24,7 @@ public class PuzzleManager : MonoBehaviour
     {
         if (cancelReplay != null) cancelReplay.gameObject.SetActive(false);
         if (replayButton != null) replayButton.gameObject.SetActive(false);
+        
         UpdateUndoButtonState(false);
     }
     void Start()
@@ -53,9 +54,9 @@ public class PuzzleManager : MonoBehaviour
     {
         foreach (var piece in FindObjectsOfType<PecaClicavel>())
         {
-            if (piece.estaSelecionada)
-                return true;
-        }
+            if (piece.estaSelecionada) 
+                return true; 
+        } 
         return false;
     }
     public void OnMouseDown(PecaClicavel pieceActually)
@@ -131,6 +132,12 @@ public class PuzzleManager : MonoBehaviour
         isReplaying = false;
         if (replayCoroutineInstance != null)
             StopCoroutine(replayCoroutineInstance);
+
+        while (currentCommandIndex < commandHistory.Count)
+        {
+            commandHistory[currentCommandIndex].Execute();
+            currentCommandIndex++;
+        }
         
         if (cancelReplay != null) cancelReplay.gameObject.SetActive(false);
         if (victoryScreen != null) victoryScreen.SetActive(true);
@@ -140,15 +147,18 @@ public class PuzzleManager : MonoBehaviour
     private IEnumerator ReplayPreviousGame()
     {
         isReplaying = true;
+        
         if (cancelReplay != null) cancelReplay.gameObject.SetActive(true);
         
-        for (int i = currentCommandIndex - 1; i >= 0; i--)
+        for (int i = currentCommandIndex - 1; i >= 0 && isReplaying; i--)
         {
             commandHistory[i].Undo();
             yield return null;
         }
+        
         currentCommandIndex = 0;
-        yield return new WaitForSeconds(0.5f);
+        
+        yield return new WaitForSecondsRealtime(0.5f);
         
         foreach (var command in commandHistory)
         {
@@ -156,9 +166,13 @@ public class PuzzleManager : MonoBehaviour
             
             command.Execute();
             currentCommandIndex++;
-            yield return new WaitForSeconds(replayDelay);
+            
+            if (currentCommandIndex < commandHistory.Count)
+                yield return new WaitForSecondsRealtime(replayDelay);
         }
+        
         isReplaying = false;
+        
         if (cancelReplay != null) cancelReplay.gameObject.SetActive(false);
 
         if (CheckPuzzleCompletion())
