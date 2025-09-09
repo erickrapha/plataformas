@@ -4994,7 +4994,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_RenderShadows: 1
-  m_RequiresDepthTextureOption: 2
+  m_RequiresDepthTextureOption: 1
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 0
   m_Cameras: []
@@ -5217,7 +5217,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 69ae72f3344a130469d741fdca5175b6, type: 2}
+  - {fileID: 2100000, guid: 7d9ba73d06d385549a8722b0e4d5665a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9056,7 +9056,7 @@ ParticleSystem:
       properties: 0
       emitProbability: 1
   LightsModule:
-    enabled: 0
+    enabled: 1
     ratio: 0
     light: {fileID: 0}
     randomDistribution: 1
@@ -10002,8 +10002,8 @@ Transform:
   m_GameObject: {fileID: 622396104}
   serializedVersion: 2
   m_LocalRotation: {x: -0.71317744, y: -0.099403545, z: 0.68616503, w: 0.10331701}
-  m_LocalPosition: {x: -0.22372063, y: 6.4, z: 4}
-  m_LocalScale: {x: 814.3674, y: 1146.5118, z: 1146.5118}
+  m_LocalPosition: {x: -0.22372063, y: 5.99, z: 4.83}
+  m_LocalScale: {x: 879.10956, y: 1237.6595, z: 1237.6595}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 400020086}
