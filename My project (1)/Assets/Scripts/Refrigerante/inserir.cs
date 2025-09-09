@@ -1,34 +1,50 @@
 using TMPro;
 using UnityEngine;
-using System.Text;
-using UnityEngine.UI;
 
 public class Inserir : MonoBehaviour
 {
     public int moedas = 0;
-    private Text moedasText;
-    
+    private TextMeshProUGUI moedasText;
     public TextMeshProUGUI avisoTMP;
     public GameObject refrigerante;
-    
+
+    void Start()
+    {
+        AtualizarMoedas();
+        avisoTMP.gameObject.SetActive(false);
+        refrigerante.SetActive(false);
+    }
     public void AdicionarMoeda()
     {
         moedas++;
         AtualizarMoedas();
     }
+    public void RetirarMoeda()
+    {
+        if (moedas > 0)
+        {
+            moedas--;
+            AtualizarMoedas();
+        }
+    }
     public void AtualizarMoedas()
     {
         moedasText.text = "Moedas:" + moedas;
     }
-    public void RetirarMoeda()
-    {
-        moedas--;
-        AtualizarMoedas();
-    }
     public void AdicionarRefrigerante()
     {
-        avisoTMP.gameObject.SetActive(true);
-        refrigerante.SetActive(true);
-        avisoTMP.text = refrigerante.name;
+        if (moedas > 0)
+        {
+            avisoTMP.gameObject.SetActive(true);
+            refrigerante.SetActive(true);
+            avisoTMP.text = "Você pegou" + refrigerante.name;
+            moedas--;
+            AtualizarMoedas();
+        }
+        else
+        {
+            avisoTMP.gameObject.SetActive(true);
+            avisoTMP.text = "Insira uma moeda primeiro!";
+        }
     }
 }

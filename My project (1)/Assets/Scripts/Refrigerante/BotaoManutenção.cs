@@ -4,7 +4,7 @@ public class BotaoManutenção : MonoBehaviour
 {
     public Animator animator;
     
-    private bool emManutencao = false;
+    private bool emManutencao;
 
     void Start()
     {
@@ -30,5 +30,5 @@ public class BotaoManutenção : MonoBehaviour
         {
             IniciarManutencao();
         }
-    }
+    } 
 }

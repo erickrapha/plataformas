@@ -3,15 +3,26 @@ using UnityEngine;
 public class MoedaController : MonoBehaviour
 {
     public Animator animator;
+
+    private int moedas = 0;
     
     public void ColetarMoeda()
     {
-        animator.SetBool("TemMoeda", true);
-        Debug.Log("Moeda Coletada");
+        moedas++;
+        animator.SetBool("TemMoeda", moedas > 0);
+        Debug.Log("Moeda Coletada. Total:" + moedas);
     }
     public void UsarMoeda()
     {
-        animator.SetBool("TemMoeda", true);
-        Debug.Log("Usando Moeda");
+        if (moedas > 0)
+        {
+            moedas--;
+            animator.SetBool("TemMoeda", moedas > 0);
+            Debug.Log("Moeda usada. Restam" + moedas);
+        }
+        else
+        {
+            Debug.Log("Sem moedas para usar!");
+        }
     }
 }
