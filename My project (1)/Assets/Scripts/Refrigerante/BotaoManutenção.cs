@@ -5,6 +5,7 @@ public class BotaoManutenção : MonoBehaviour
 {
     public Animator animator;
     public TMP_Text textoManutenção;
+    public MoedaController avisos;
     
     private bool emManutencao;
 
@@ -28,6 +29,7 @@ public class BotaoManutenção : MonoBehaviour
     }
     public void TerminarManutencao()
     {
+        avisos.LimparAviso();
         emManutencao = false;
         animator.SetBool("EmManutencao", false);
         if (textoManutenção != null)

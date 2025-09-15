@@ -19,12 +19,14 @@ public class MoedaController : MonoBehaviour
     }
     public void ColetarMoeda()
     {
+        LimparAviso();
         moedas++;
         AtualizarEstado();
         Debug.Log("Moeda Coletada. Total:" + moedas);
     }
     public void UsarMoeda()
     {
+        LimparAviso();
         if (moedas > 0)
         {
             moedas--;
@@ -38,6 +40,7 @@ public class MoedaController : MonoBehaviour
     }
     public void RetirarMoeda()
     {
+        LimparAviso();
         if (moedas > 0)
         {
             moedas--;
@@ -51,6 +54,7 @@ public class MoedaController : MonoBehaviour
     }
     public void AdicionarRefrigerante()
     {
+        LimparAviso();
         if (moedas > 0)
         {   
             if (moedas > 0)
@@ -83,6 +87,13 @@ public class MoedaController : MonoBehaviour
         {
             avisoTMP.gameObject.SetActive(true);
             avisoTMP.text = mensagem;
+        }
+    }
+    public void LimparAviso()
+    {
+        if (avisoTMP != null)
+        {
+            avisoTMP.gameObject.SetActive(false);
         }
     }
 
