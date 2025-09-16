@@ -1705,7 +1705,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 755072151}
         m_TargetAssemblyTypeName: "BotaoManuten\xE7\xE3o, Assembly-CSharp"
-        m_MethodName: IniciarManutencao
+        m_MethodName: AlternarManutencao
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1768,6 +1768,8 @@ MonoBehaviour:
   animator: {fileID: 755072152}
   "textoManuten\xE7\xE3o": {fileID: 1251496396}
   avisos: {fileID: 1225238823}
+  buttonCancel: {fileID: 448268977}
+  buttonComprar: {fileID: 1017565889}
 --- !u!95 &755072152
 Animator:
   serializedVersion: 7
@@ -2295,6 +2297,9 @@ MonoBehaviour:
   moedasText: {fileID: 5148646}
   avisoTMP: {fileID: 562223456}
   refrigerante: {fileID: 13623824}
+  botaoCancelar: {fileID: 448268977}
+  botaoComprar: {fileID: 1017565889}
+  botaoInserir: {fileID: 673498051}
 --- !u!4 &1225238824
 Transform:
   m_ObjectHideFlags: 0

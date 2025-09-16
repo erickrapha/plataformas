@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MoedaController : MonoBehaviour
 {
@@ -8,6 +9,11 @@ public class MoedaController : MonoBehaviour
     public TextMeshProUGUI moedasText;
     public TextMeshProUGUI avisoTMP;
     public GameObject refrigerante;
+    
+    [Header("Botôes de controle")] 
+    public Button botaoCancelar;
+    public Button botaoComprar;
+    public Button botaoInserir;
 
     private int moedas = 0;
     
@@ -22,6 +28,7 @@ public class MoedaController : MonoBehaviour
         LimparAviso();
         moedas++;
         AtualizarEstado();
+        AdicionarRefrigerante();
         Debug.Log("Moeda Coletada. Total:" + moedas);
     }
     public void UsarMoeda()
@@ -80,6 +87,13 @@ public class MoedaController : MonoBehaviour
     {
         if (moedasText != null)
             moedasText.text = "Moedas:" + moedas;
+
+        if (moedas == 0)
+        {
+            TravarComprar(false);
+            TravarCancelar(false);
+            TravarInserir(true);
+        }
     }
     private void MostrarAviso(string mensagem)
     {
@@ -96,5 +110,25 @@ public class MoedaController : MonoBehaviour
             avisoTMP.gameObject.SetActive(false);
         }
     }
-
+    private void TravarComprar(bool travar)
+    {
+        if (botaoComprar != null)
+        {
+            botaoComprar.interactable = !travar;
+        }
+    }
+    private void TravarCancelar(bool travar)
+    {
+        if (botaoCancelar != null)
+        {
+            botaoCancelar.interactable = !travar;
+        }
+    }
+    private void TravarInserir(bool travar)
+    {
+        if (botaoInserir != null)
+        {
+            botaoInserir.interactable = !travar;
+        }
+    }
 }
