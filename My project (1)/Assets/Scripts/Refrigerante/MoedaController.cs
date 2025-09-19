@@ -7,7 +7,8 @@ public class MoedaController : MonoBehaviour
     [Header("References")]
     public Animator animator;
     public TextMeshProUGUI moedasText;
-    public TextMeshProUGUI avisoTMP;
+    public TextMeshProUGUI avisoVazio;
+    public TextMeshProUGUI avisoOk;
     public GameObject refrigerante;
     
     [Header("Botôes de controle")] 
@@ -20,60 +21,65 @@ public class MoedaController : MonoBehaviour
     void Start()
     {
         AtualizarUI();
-        if (avisoTMP != null) avisoTMP.gameObject.SetActive(false);
+        if (avisoVazio != null) avisoVazio.gameObject.SetActive(false);
+        if (avisoOk != null) avisoOk.gameObject.SetActive(false);
         if (refrigerante != null) refrigerante.SetActive(false);
     }
     public void ColetarMoeda()
     {
-        LimparAviso();
         moedas++;
         AtualizarEstado();
         AdicionarRefrigerante();
-        Debug.Log("Moeda Coletada. Total:" + moedas);
+        if (avisoVazio != null) avisoVazio.gameObject.SetActive(false);
+        if (avisoOk != null) avisoOk.gameObject.SetActive(true);
     }
     public void UsarMoeda()
     {
-        LimparAviso();
         if (moedas > 0)
         {
             moedas--;
             AtualizarEstado();
-            Debug.Log("Moeda usada. Restam" + moedas);
+            if (avisoVazio != null) avisoVazio.gameObject.SetActive(false);
+            if (avisoOk != null) avisoOk.gameObject.SetActive(true);
         }
         else
         {
-            MostrarAviso("Sem moedas para usar!");
+            if (avisoOk != null) avisoOk.gameObject.SetActive(false);
+            if (avisoVazio != null) avisoVazio.gameObject.SetActive(true);
         }
     }
     public void RetirarMoeda()
     {
-        LimparAviso();
+        
         if (moedas > 0)
         {
             moedas--;
             AtualizarEstado();
-            Debug.Log("Moeda retirada. Restam" + moedas);
+            if (avisoVazio != null) avisoVazio.gameObject.SetActive(false);
+            if (avisoOk != null) avisoOk.gameObject.SetActive(true);
         }
         else
         {
-            MostrarAviso("Nenhuma moeda para retirar!");
+            if (avisoOk != null) avisoOk.gameObject.SetActive(false);
+            if (avisoVazio != null) avisoVazio.gameObject.SetActive(true);
         }
     }
     public void AdicionarRefrigerante()
     {
-        LimparAviso();
         if (moedas > 0)
         {   
             if (moedas > 0)
             {
                 UsarMoeda();
                 if (refrigerante != null) refrigerante.SetActive(true);
-                MostrarAviso("Você pegou" + refrigerante.name);
+                if (avisoVazio != null) avisoVazio.gameObject.SetActive(false);
+                if (avisoOk != null) avisoOk.gameObject.SetActive(true);
             }
         }
         else
         {
-            MostrarAviso("Insira uma moeda antes!");
+            if (avisoOk != null) avisoOk.gameObject.SetActive(false);
+            if (avisoVazio != null) avisoVazio.gameObject.SetActive(true);
         }
     }
     private void AtualizarEstado()
@@ -93,21 +99,6 @@ public class MoedaController : MonoBehaviour
             TravarComprar(false);
             TravarCancelar(false);
             TravarInserir(true);
-        }
-    }
-    private void MostrarAviso(string mensagem)
-    {
-        if (avisoTMP != null)
-        {
-            avisoTMP.gameObject.SetActive(true);
-            avisoTMP.text = mensagem;
-        }
-    }
-    public void LimparAviso()
-    {
-        if (avisoTMP != null)
-        {
-            avisoTMP.gameObject.SetActive(false);
         }
     }
     private void TravarComprar(bool travar)

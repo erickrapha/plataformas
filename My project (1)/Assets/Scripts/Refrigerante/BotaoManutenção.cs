@@ -7,9 +7,10 @@ public class BotaoManutenção : MonoBehaviour
     [Header("Referências")]
     public Animator animator;
     public TMP_Text textoManutenção;
-    public MoedaController avisos;
+    public MoedaController okAviso;
+    public MoedaController vazioAviso;
 
-    [Header("Botôes de controle")] 
+    [Header("Botões de controle")] 
     public Button buttonCancel;
     public Button buttonComprar;
     
@@ -31,13 +32,17 @@ public class BotaoManutenção : MonoBehaviour
         emManutencao = true;
         animator.SetBool("EmManutenção", true);
         
+        if (vazioAviso != null)
+        {
+            vazioAviso.gameObject.SetActive(false);
+        }
+        if (okAviso != null)
+        {
+            okAviso.gameObject.SetActive(false);
+        }
         if (textoManutenção != null)
         {
             textoManutenção.gameObject.SetActive(true);
-        }
-        if (avisos != null)
-        {
-            avisos.LimparAviso();
         }
         TravarBotao(true);
     }

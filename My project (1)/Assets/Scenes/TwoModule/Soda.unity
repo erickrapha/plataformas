@@ -508,6 +508,56 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &285921199
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 285921201}
+  - component: {fileID: 285921200}
+  m_Layer: 0
+  m_Name: MaintenanceController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &285921200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285921199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f23da214ecfb4cf4a8590f5731b8b738, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 448268981}
+  "textoManuten\xE7\xE3o": {fileID: 1251496396}
+  okAviso: {fileID: 1225238823}
+  vazioAviso: {fileID: 1225238823}
+  buttonCancel: {fileID: 448268977}
+  buttonComprar: {fileID: 1017565889}
+--- !u!4 &285921201
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285921199}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 397.97858, y: 242.20076, z: -1.5923554}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &448268975
 GameObject:
   m_ObjectHideFlags: 0
@@ -1630,7 +1680,6 @@ GameObject:
   - component: {fileID: 755072149}
   - component: {fileID: 755072148}
   - component: {fileID: 755072147}
-  - component: {fileID: 755072151}
   - component: {fileID: 755072152}
   m_Layer: 5
   m_Name: "Manuten\xE7\xE3o"
@@ -1703,7 +1752,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 755072151}
+      - m_Target: {fileID: 285921200}
         m_TargetAssemblyTypeName: "BotaoManuten\xE7\xE3o, Assembly-CSharp"
         m_MethodName: AlternarManutencao
         m_Mode: 1
@@ -1753,23 +1802,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 755072145}
   m_CullTransparentMesh: 1
---- !u!114 &755072151
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 755072145}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f23da214ecfb4cf4a8590f5731b8b738, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 755072152}
-  "textoManuten\xE7\xE3o": {fileID: 1251496396}
-  avisos: {fileID: 1225238823}
-  buttonCancel: {fileID: 448268977}
-  buttonComprar: {fileID: 1017565889}
 --- !u!95 &755072152
 Animator:
   serializedVersion: 7
@@ -2295,7 +2327,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 448268981}
   moedasText: {fileID: 5148646}
-  avisoTMP: {fileID: 562223456}
+  avisoVazio: {fileID: 0}
+  avisoOk: {fileID: 0}
   refrigerante: {fileID: 13623824}
   botaoCancelar: {fileID: 448268977}
   botaoComprar: {fileID: 1017565889}
@@ -3122,3 +3155,4 @@ SceneRoots:
   - {fileID: 1725512222}
   - {fileID: 1739757242}
   - {fileID: 1225238824}
+  - {fileID: 285921201}
