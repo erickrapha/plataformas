@@ -10,7 +10,7 @@ public class MoedaController : MonoBehaviour
     public TextMeshProUGUI avisoVazio;
     public TextMeshProUGUI avisoOk;
     public GameObject refrigerante;
-    
+     
     [Header("Botôes de controle")] 
     public Button botaoCancelar;
     public Button botaoComprar;
@@ -96,9 +96,9 @@ public class MoedaController : MonoBehaviour
 
         if (moedas == 0)
         {
-            TravarComprar(false);
-            TravarCancelar(false);
-            TravarInserir(true);
+            TravarComprar(true);
+            TravarCancelar(true);
+            TravarInserir(false);
         }
     }
     private void TravarComprar(bool travar)
