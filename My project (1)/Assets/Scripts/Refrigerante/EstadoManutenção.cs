@@ -10,5 +10,4 @@ public class EstadoManutenção : StateMachineBehaviour
     {
         Debug.Log("Terminou a manutenção da máquina");
     }
-    
 }

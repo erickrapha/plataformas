@@ -30,58 +30,101 @@ public class MoedaController : MonoBehaviour
 
     public void EntrarManutencao()
     {
-        
+        emManutencao = true;
+        animator.SetTrigger("EmManutenção");
+        //TravarBotoes(true, true, false);
+        MostrarEstoque();
     }
     public void SairManutencao()
     {
-        
+        emManutencao = false;
+        if (estoque <= 0)
+        {
+            animator.SetTrigger("SemRefrigerante");
+        }
+        else if (moedas > 1)
+        {
+            animator.SetTrigger("ComMoeda");
+        }
+        else 
+        {
+            animator.SetTrigger("SemMoeda");
+        }
+        AtualizarUI();
     }
-    public void ColetarMoeda()
+    public void Inserir()
     {
-        moedas++;
-        AtualizarEstado();
-        AdicionarRefrigerante();
-        if (avisoVazio != null) avisoVazio.gameObject.SetActive(false);
-        if (avisoOk != null) avisoOk.gameObject.SetActive(true);
+        if (emManutencao)
+        {
+            estoque++;
+            MostrarEstoque();
+        }
+        else if (estoque > 0)
+        {
+            moedas++;
+            animator.SetTrigger("ComMoeda");
+            avisoOk.gameObject.SetActive(true);
+            //TravarBotoes(true, false, false);
+        }
     }
-    public void UsarMoeda()
+    public void Cancelar()
     {
-        if (moedas > 0)
+        if (!emManutencao & moedas > 0)
         {
             moedas--;
-            AtualizarEstado();
-            if (avisoVazio != null) avisoVazio.gameObject.SetActive(false);
-            if (avisoOk != null) avisoOk.gameObject.SetActive(true);
+            if (moedas == 0)
+            {
+                animator.SetTrigger("SemMoeda");
+                avisoOk.gameObject.SetActive(true);
+                //TravarBotoes(false, true, true);
+            }
+            AtualizarUI();
+        }
+    }
+    public void Comprar()
+    {
+        if (!emManutencao && moedas > 0 && estoque > 0)
+        {
+            moedas--;
+            estoque--;
+            animator.SetTrigger("Venda");
+            SoltarRefrigerante();
+            Invoke(nameof(VerificarPosCompra), 2f);
+        }
+    }
+    private void VerificarPosCompra()
+    {
+        if (estoque <= 0)
+        {
+            animator.SetTrigger("SemRefrigerante");
+            avisoVazio.gameObject.SetActive(true);
+            //TravarBotoes(true, true, true);
+        }
+        else if (moedas > 0)
+        {
+            animator.SetTrigger("ComMoeda");
+            avisoOk.gameObject.SetActive(true);
+            //TravarBotoes(true, false, false);
         }
         else
         {
-            if (avisoOk != null) avisoOk.gameObject.SetActive(false);
-            if (avisoVazio != null) avisoVazio.gameObject.SetActive(true);
+            animator.SetTrigger("SemMoeda");
+            avisoOk.gameObject.SetActive(false);
+            //TravarBotoes(false, true, true);
         }
+        AtualizarUI();
     }
-    public void RetirarMoeda()
+    private void MostrarEstoque()
     {
         
-        if (moedas > 0)
-        {
-            moedas--;
-            AtualizarEstado();
-            if (avisoVazio != null) avisoVazio.gameObject.SetActive(false);
-            if (avisoOk != null) avisoOk.gameObject.SetActive(true);
-        }
-        else
-        {
-            if (avisoOk != null) avisoOk.gameObject.SetActive(false);
-            if (avisoVazio != null) avisoVazio.gameObject.SetActive(true);
-        }
     }
-    public void AdicionarRefrigerante()
+    public void SoltarRefrigerante()
     {
         if (moedas > 0)
         {   
             if (moedas > 0)
             {
-                UsarMoeda();
+                //UsarMoeda();
                 if (refrigerante != null) refrigerante.SetActive(true);
                 if (avisoVazio != null) avisoVazio.gameObject.SetActive(false);
                 if (avisoOk != null) avisoOk.gameObject.SetActive(true);
@@ -93,44 +136,14 @@ public class MoedaController : MonoBehaviour
             if (avisoVazio != null) avisoVazio.gameObject.SetActive(true);
         }
     }
-    private void AtualizarEstado()
-    {
-        if (animator != null)
-            animator.SetBool("TemMoeda", moedas > 0);
-        
-        AtualizarUI();
-    }
     private void AtualizarUI()
     {
-        if (moedasText != null)
-            moedasText.text = "Moedas:" + moedas;
-
-        if (moedas == 0)
-        {
-            TravarComprar(true);
-            TravarCancelar(true);
-            TravarInserir(false);
-        }
+        moedasText.text = "Moedas:" + moedas;
     }
-    private void TravarComprar(bool travar)
+    private void TravarBotoes(bool travar)
     {
-        if (botaoComprar != null)
-        {
-            botaoComprar.interactable = !travar;
-        }
-    }
-    private void TravarCancelar(bool travar)
-    {
-        if (botaoCancelar != null)
-        {
-            botaoCancelar.interactable = !travar;
-        }
-    }
-    private void TravarInserir(bool travar)
-    {
-        if (botaoInserir != null)
-        {
-            botaoInserir.interactable = !travar;
-        }
+        if (botaoComprar != null) botaoComprar.interactable = !travar;
+        if (botaoCancelar != null) botaoCancelar.interactable = !travar;
+        if (botaoInserir != null) botaoInserir.interactable = !travar;
     }
 }
