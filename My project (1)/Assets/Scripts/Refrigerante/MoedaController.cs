@@ -4,26 +4,37 @@ using UnityEngine.UI;
 
 public class MoedaController : MonoBehaviour
 {
-    [Header("References")]
+    [Header("Referências")]
     public Animator animator;
     public TextMeshProUGUI moedasText;
     public TextMeshProUGUI avisoVazio;
     public TextMeshProUGUI avisoOk;
-    public GameObject refrigerante;
+    public GameObject refrigerante; //refrigerantePrefab
+    public Transform slotRefrigerante;
      
-    [Header("Botôes de controle")] 
+    [Header("Botões de controle")] 
     public Button botaoCancelar;
     public Button botaoComprar;
     public Button botaoInserir;
 
     private int moedas = 0;
+    private int estoque = 3;
+    private bool emManutencao = false;
     
     void Start()
     {
         AtualizarUI();
         if (avisoVazio != null) avisoVazio.gameObject.SetActive(false);
         if (avisoOk != null) avisoOk.gameObject.SetActive(false);
-        if (refrigerante != null) refrigerante.SetActive(false);
+    }
+
+    public void EntrarManutencao()
+    {
+        
+    }
+    public void SairManutencao()
+    {
+        
     }
     public void ColetarMoeda()
     {

@@ -6,10 +6,7 @@ public class BotaoManutenção : MonoBehaviour
 {
     [Header("Referências")] 
     public MoedaController maquina;
-    //public Animator animator;
     public TMP_Text textoManutenção;
-    /*public MoedaController okAviso;
-    public MoedaController vazioAviso;*/
     public Button buttonCancel;
     public Button buttonComprar;
     
@@ -17,14 +14,7 @@ public class BotaoManutenção : MonoBehaviour
 
     void Start()
     {
-        /*emManutencao = false;
-        animator.SetBool("EmManutenção", false);
-        
-        if (textoManutenção != null)
-        {*/
-            textoManutenção.gameObject.SetActive(false);
-        /*}
-        TravarBotao(false);*/
+        textoManutenção.gameObject.SetActive(false);
     }
     public void AlternarManutencao()
     {
@@ -41,22 +31,20 @@ public class BotaoManutenção : MonoBehaviour
     {
         emManutencao = true;
         textoManutenção.gameObject.SetActive(true);
-        //maquina.EntrarManutencao();
-        TravarBotao(true);
+        maquina.EntrarManutencao();
+        TravarBotoes(true);
     }
     public void TerminarManutencao()
     {
         emManutencao = false;
         textoManutenção.gameObject.SetActive(false);
-        //maquina.SairManutencao();
-        TravarBotao(false);
+        maquina.SairManutencao();
+        TravarBotoes(false);
     }
-    private void TravarBotao(bool travar)
+    private void TravarBotoes(bool travar)
     {
-        if (buttonCancel != null)
-            buttonCancel.interactable = !travar;
+        if (buttonCancel != null) buttonCancel.interactable = !travar;
         
-        if (buttonComprar != null)
-            buttonComprar.interactable = !travar;
+        if (buttonComprar != null) buttonComprar.interactable = !travar;
     }
 }
