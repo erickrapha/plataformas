@@ -9,7 +9,7 @@ public class MoedaController : MonoBehaviour
     public TextMeshProUGUI moedasText;
     public TextMeshProUGUI avisoVazio;
     public TextMeshProUGUI avisoOk;
-    public GameObject refrigerante; //refrigerantePrefab
+    public GameObject refrigerantePrefab;
     public Transform slotRefrigerante;
      
     [Header("Botões de controle")] 
@@ -27,12 +27,11 @@ public class MoedaController : MonoBehaviour
         if (avisoVazio != null) avisoVazio.gameObject.SetActive(false);
         if (avisoOk != null) avisoOk.gameObject.SetActive(false);
     }
-
     public void EntrarManutencao()
     {
         emManutencao = true;
         animator.SetTrigger("EmManutenção");
-        //TravarBotoes(true, true, false);
+        TravarBotoes(true, true, false);
         MostrarEstoque();
     }
     public void SairManutencao()
@@ -64,7 +63,7 @@ public class MoedaController : MonoBehaviour
             moedas++;
             animator.SetTrigger("ComMoeda");
             avisoOk.gameObject.SetActive(true);
-            //TravarBotoes(true, false, false);
+            TravarBotoes(true, false, false);
         }
     }
     public void Cancelar()
@@ -76,7 +75,7 @@ public class MoedaController : MonoBehaviour
             {
                 animator.SetTrigger("SemMoeda");
                 avisoOk.gameObject.SetActive(true);
-                //TravarBotoes(false, true, true);
+                TravarBotoes(false, true, true);
             }
             AtualizarUI();
         }
@@ -98,52 +97,47 @@ public class MoedaController : MonoBehaviour
         {
             animator.SetTrigger("SemRefrigerante");
             avisoVazio.gameObject.SetActive(true);
-            //TravarBotoes(true, true, true);
+            TravarBotoes(true, true, true);
         }
         else if (moedas > 0)
         {
             animator.SetTrigger("ComMoeda");
             avisoOk.gameObject.SetActive(true);
-            //TravarBotoes(true, false, false);
+            TravarBotoes(true, false, false);
         }
         else
         {
             animator.SetTrigger("SemMoeda");
             avisoOk.gameObject.SetActive(false);
-            //TravarBotoes(false, true, true);
+            TravarBotoes(false, true, true);
         }
         AtualizarUI();
     }
     private void MostrarEstoque()
     {
-        
-    }
-    public void SoltarRefrigerante()
-    {
-        if (moedas > 0)
-        {   
-            if (moedas > 0)
-            {
-                //UsarMoeda();
-                if (refrigerante != null) refrigerante.SetActive(true);
-                if (avisoVazio != null) avisoVazio.gameObject.SetActive(false);
-                if (avisoOk != null) avisoOk.gameObject.SetActive(true);
-            }
-        }
-        else
+        foreach (Transform child in slotRefrigerante)
+            Destroy(child.gameObject);
+        for (int i = 0; i < estoque; i++)
         {
-            if (avisoOk != null) avisoOk.gameObject.SetActive(false);
-            if (avisoVazio != null) avisoVazio.gameObject.SetActive(true);
+            Instantiate(refrigerantePrefab, slotRefrigerante);
+        }
+    }
+    private void SoltarRefrigerante()
+    {
+        if (refrigerantePrefab != null)
+        {   
+            GameObject refri = Instantiate(refrigerantePrefab);
+            refri.transform.position = slotRefrigerante.position + Vector3.down * 2;
         }
     }
     private void AtualizarUI()
     {
         moedasText.text = "Moedas:" + moedas;
     }
-    private void TravarBotoes(bool travar)
+    private void TravarBotoes(bool travarInserir, bool travarCancelar, bool travarComprar)
     {
-        if (botaoComprar != null) botaoComprar.interactable = !travar;
-        if (botaoCancelar != null) botaoCancelar.interactable = !travar;
-        if (botaoInserir != null) botaoInserir.interactable = !travar;
+        if (botaoComprar != null) botaoComprar.interactable = !travarComprar;
+        if (botaoCancelar != null) botaoCancelar.interactable = !travarCancelar;
+        if (botaoInserir != null) botaoInserir.interactable = !travarInserir;
     }
 }
